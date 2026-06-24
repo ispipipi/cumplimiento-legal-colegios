@@ -616,7 +616,7 @@
     }
 
     .dashboard-bottom-grid {
-      grid-template-columns: 1.15fr 0.9fr 0.95fr;
+      grid-template-columns: 1.2fr 0.8fr;
     }
 
     .dashboard-module-grid {
@@ -691,6 +691,31 @@
       background: #fff;
     }
 
+    .dashboard-alert-item {
+      width: 100%;
+      text-align: left;
+      cursor: pointer;
+      transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+    }
+
+    .dashboard-alert-item:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 14px 28px rgba(15, 23, 42, 0.08);
+      border-color: #93c5fd;
+    }
+
+    .dashboard-alert-item:focus-visible {
+      outline: none;
+      box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.14);
+      border-color: #60a5fa;
+    }
+
+    .dashboard-alert-item.active {
+      border-color: #60a5fa;
+      box-shadow: 0 16px 34px rgba(37, 99, 235, 0.14);
+      transform: translateY(-1px);
+    }
+
     .dashboard-health-head,
     .dashboard-alert-head {
       display: flex;
@@ -739,6 +764,324 @@
       border-left: 4px solid #dc2626;
     }
 
+    .dashboard-alert-detail {
+      margin-top: 1rem;
+      padding: 1.2rem;
+      border: 1px solid #dbe4f0;
+      border-radius: 24px;
+      background:
+        radial-gradient(circle at top right, rgba(47, 123, 229, 0.16), transparent 34%),
+        linear-gradient(145deg, #ffffff 0%, #f6faff 54%, #eef5ff 100%);
+      display: grid;
+      gap: 1rem;
+      box-shadow: 0 20px 44px rgba(15, 23, 42, 0.08);
+    }
+
+    .dashboard-alert-detail-head {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .dashboard-alert-detail-head h4 {
+      margin-top: 0.55rem;
+      font-size: 1.35rem;
+      letter-spacing: -0.04em;
+    }
+
+    .dashboard-alert-detail-head p {
+      margin-top: 0.45rem;
+      max-width: 56ch;
+      color: var(--text-soft);
+      line-height: 1.6;
+    }
+
+    .dashboard-alert-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.35rem 0.72rem;
+      border-radius: 999px;
+      font-size: 0.72rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+    }
+
+    .dashboard-alert-badge.ok {
+      background: rgba(22, 163, 74, 0.12);
+      color: #166534;
+    }
+
+    .dashboard-alert-badge.warn {
+      background: rgba(245, 158, 11, 0.15);
+      color: #b45309;
+    }
+
+    .dashboard-alert-badge.danger {
+      background: rgba(220, 38, 38, 0.12);
+      color: #991b1b;
+    }
+
+    .dashboard-alert-owner {
+      min-width: 220px;
+      padding: 0.95rem 1rem;
+      border: 1px solid rgba(148, 163, 184, 0.22);
+      border-radius: 20px;
+      background: rgba(255, 255, 255, 0.88);
+    }
+
+    .dashboard-alert-owner span,
+    .dashboard-alert-kpi span,
+    .dashboard-alert-block span,
+    .dashboard-alert-school span,
+    .dashboard-alert-step span {
+      display: block;
+      font-size: 0.72rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: #64748b;
+    }
+
+    .dashboard-alert-owner strong {
+      display: block;
+      margin-top: 0.4rem;
+      font-size: 0.98rem;
+    }
+
+    .dashboard-alert-owner p {
+      margin-top: 0.3rem;
+      color: var(--text-soft);
+      font-size: 0.84rem;
+    }
+
+    .dashboard-alert-kpis {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0.85rem;
+    }
+
+    .dashboard-alert-kpi {
+      padding: 0.95rem 1rem;
+      border: 1px solid rgba(148, 163, 184, 0.2);
+      border-radius: 20px;
+      background: rgba(255, 255, 255, 0.92);
+    }
+
+    .dashboard-alert-kpi strong {
+      display: block;
+      margin-top: 0.45rem;
+      font-size: 1.5rem;
+      letter-spacing: -0.05em;
+      color: #0f172a;
+    }
+
+    .dashboard-alert-kpi p {
+      margin-top: 0.35rem;
+      color: var(--text-soft);
+      font-size: 0.82rem;
+    }
+
+    .dashboard-alert-detail-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.3fr) minmax(280px, 0.9fr);
+      gap: 1rem;
+    }
+
+    .dashboard-alert-block {
+      padding: 1rem;
+      border: 1px solid rgba(148, 163, 184, 0.2);
+      border-radius: 22px;
+      background: rgba(255, 255, 255, 0.92);
+    }
+
+    .dashboard-alert-block h5 {
+      margin-top: 0.45rem;
+      font-size: 1rem;
+      color: #0f172a;
+    }
+
+    .dashboard-alert-school-list,
+    .dashboard-alert-timeline {
+      display: grid;
+      gap: 0.72rem;
+      margin-top: 0.9rem;
+    }
+
+    .dashboard-alert-school,
+    .dashboard-alert-step {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 0.85rem;
+      padding: 0.9rem 0.95rem;
+      border-radius: 18px;
+      background: #f8fbff;
+      border: 1px solid #e2e8f0;
+    }
+
+    .dashboard-alert-school strong,
+    .dashboard-alert-step strong {
+      display: block;
+      margin-top: 0.32rem;
+      font-size: 0.95rem;
+      color: #0f172a;
+    }
+
+    .dashboard-alert-school p,
+    .dashboard-alert-step p {
+      margin-top: 0.28rem;
+      color: var(--text-soft);
+      font-size: 0.8rem;
+      line-height: 1.45;
+    }
+
+    .dashboard-alert-pill {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 92px;
+      padding: 0.38rem 0.7rem;
+      border-radius: 999px;
+      font-size: 0.74rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    .dashboard-alert-pill.ok {
+      background: #dcfce7;
+      color: #166534;
+    }
+
+    .dashboard-alert-pill.warn {
+      background: #fef3c7;
+      color: #b45309;
+    }
+
+    .dashboard-alert-pill.danger {
+      background: #fee2e2;
+      color: #991b1b;
+    }
+
+    .dashboard-alert-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.7rem;
+    }
+
+    .alerts-shell {
+      display: grid;
+      gap: 1rem;
+    }
+
+    .alerts-center-grid {
+      display: grid;
+      grid-template-columns: minmax(300px, 0.88fr) minmax(0, 1.22fr);
+      gap: 1rem;
+      align-items: start;
+    }
+
+    .alerts-menu-card {
+      position: sticky;
+      top: 1rem;
+    }
+
+    .alerts-menu-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.8rem;
+      margin-bottom: 1rem;
+    }
+
+    .alerts-menu-head strong {
+      display: block;
+      font-size: 1.15rem;
+      color: #0f172a;
+    }
+
+    .alerts-menu-head p {
+      margin-top: 0.28rem;
+      color: var(--text-soft);
+      font-size: 0.82rem;
+    }
+
+    .alerts-mini-kpi {
+      min-width: 84px;
+      padding: 0.7rem 0.85rem;
+      border-radius: 18px;
+      background: linear-gradient(135deg, #173f73 0%, #2f7be5 100%);
+      color: #fff;
+      text-align: center;
+    }
+
+    .alerts-mini-kpi span {
+      display: block;
+      font-size: 0.68rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      opacity: 0.78;
+    }
+
+    .alerts-mini-kpi strong {
+      display: block;
+      margin-top: 0.25rem;
+      font-size: 1.28rem;
+      letter-spacing: -0.05em;
+    }
+
+    .alerts-menu-list {
+      display: grid;
+      gap: 0.75rem;
+    }
+
+    .alerts-overview-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1rem;
+    }
+
+    .alerts-overview-card {
+      padding: 1rem 1.05rem;
+      border: 1px solid #dbe4f0;
+      border-radius: 24px;
+      background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+      box-shadow: 0 14px 28px rgba(15, 23, 42, 0.05);
+    }
+
+    .alerts-overview-card span {
+      display: block;
+      font-size: 0.72rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: #64748b;
+    }
+
+    .alerts-overview-card strong {
+      display: block;
+      margin-top: 0.4rem;
+      font-size: 1.7rem;
+      letter-spacing: -0.05em;
+      color: #0f172a;
+    }
+
+    .alerts-overview-card p {
+      margin-top: 0.35rem;
+      color: var(--text-soft);
+      font-size: 0.84rem;
+    }
+
+    .detail-focus {
+      position: relative;
+      border-color: #60a5fa !important;
+      box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.12), 0 20px 40px rgba(37, 99, 235, 0.12) !important;
+      transition: box-shadow 0.2s ease, border-color 0.2s ease;
+    }
+
     @media (max-width: 1280px) {
       .dashboard-metrics,
       .dashboard-bottom-grid {
@@ -758,8 +1101,16 @@
       .dashboard-module-grid,
       .dashboard-mini-board,
       .dashboard-bottom-grid,
-      .dashboard-funding-wrap {
+      .dashboard-funding-wrap,
+      .dashboard-alert-kpis,
+      .dashboard-alert-detail-grid,
+      .alerts-center-grid,
+      .alerts-overview-grid {
         grid-template-columns: 1fr;
+      }
+
+      .alerts-menu-card {
+        position: static;
       }
     }
 
@@ -796,6 +1147,19 @@
     <main class="content">
       <section id="dashboardView" class="view active">
         <div class="dashboard-shell">
+          <div class="card dashboard-panel">
+            <div class="card-head">
+              <div>
+                <h3>Alertas del dia</h3>
+                <p>Lo primero que vale la pena revisar en la operacion.</p>
+              </div>
+              <div class="actions">
+                <button class="btn btn-secondary" data-view="alerts">Ver menu de alertas</button>
+              </div>
+            </div>
+            <div class="dashboard-alert-list" id="dashboardSummary"></div>
+          </div>
+
           <div class="dashboard-hero-grid">
             <div class="dashboard-hero-panel">
               <div class="eyebrow">RRHH educacional</div>
@@ -883,16 +1247,57 @@
               </div>
               <div class="dashboard-health-list" id="dashboardOpsHealth"></div>
             </div>
+          </div>
+        </div>
+      </section>
 
-            <div class="card dashboard-panel">
-              <div class="card-head">
+      <section id="alertsView" class="view">
+        <div class="view-head">
+          <div>
+            <div class="eyebrow">Modulo 1</div>
+            <h2>Centro de Alertas</h2>
+            <p>Menu visual de alertas con detalle ejecutivo ficticio, prioridad, impacto y acceso rapido a cada flujo.</p>
+          </div>
+          <div class="actions">
+            <button class="btn btn-secondary" data-view="dashboard">Volver al dashboard</button>
+          </div>
+        </div>
+
+        <div class="alerts-shell">
+          <div class="alerts-overview-grid">
+            <div class="alerts-overview-card">
+              <span>Alertas activas</span>
+              <strong class="mono">03</strong>
+              <p>Seguimiento operativo abierto para la demo.</p>
+            </div>
+            <div class="alerts-overview-card">
+              <span>Criticas hoy</span>
+              <strong class="mono">01</strong>
+              <p>Requiere definicion legal antes de emitir documentos.</p>
+            </div>
+            <div class="alerts-overview-card">
+              <span>Ventana sugerida</span>
+              <strong class="mono">18:00</strong>
+              <p>Hora objetivo para cerrar observaciones del dia.</p>
+            </div>
+          </div>
+
+          <div class="alerts-center-grid">
+            <div class="card alerts-menu-card">
+              <div class="alerts-menu-head">
                 <div>
-                  <h3>Alertas del dia</h3>
-                  <p>Lo que vale la pena mostrar primero.</p>
+                  <strong>Menu de alertas</strong>
+                  <p>Selecciona una alerta para ver su ficha ejecutiva.</p>
+                </div>
+                <div class="alerts-mini-kpi">
+                  <span>Abiertas</span>
+                  <strong class="mono">3</strong>
                 </div>
               </div>
-              <div class="dashboard-alert-list" id="dashboardSummary"></div>
+              <div class="alerts-menu-list" id="alertsMenuList"></div>
             </div>
+
+            <div class="dashboard-alert-detail" id="alertsDetail"></div>
           </div>
         </div>
       </section>
@@ -900,7 +1305,7 @@
       <section id="mineducView" class="view">
         <div class="view-head">
           <div>
-            <div class="eyebrow">Modulo 1</div>
+            <div class="eyebrow">Modulo 2</div>
             <h2>Cumplimiento MINEDUC</h2>
             <p>Flujo guiado en 5 pasos: seleccion, revision, distribucion, validacion y carga automatizada simulada.</p>
           </div>
@@ -1068,7 +1473,7 @@
       <section id="contractsView" class="view">
         <div class="view-head">
           <div>
-            <div class="eyebrow">Modulo 2</div>
+            <div class="eyebrow">Modulo 3</div>
             <h2>Generador de Contratos</h2>
             <p>Formulario dinamico, perfiles de cargo y previsualizacion inmediata del documento laboral.</p>
           </div>
@@ -1094,7 +1499,7 @@
                 </div>
                 <p id="documentModeHint" class="mode-hint">Modo actual: contrato individual con datos del trabajador y condiciones de ingreso.</p>
               </div>
-              <div class="rut-import-block">
+              <div class="rut-import-block" id="contractImportBlock">
                 <label class="label" for="contractRut">RUT</label>
                 <div class="rut-import-row">
                   <select id="contractRut" required>
@@ -1177,7 +1582,7 @@
       <section id="settlementView" class="view">
         <div class="view-head">
           <div>
-            <div class="eyebrow">Modulo 3</div>
+            <div class="eyebrow">Modulo 4</div>
             <h2>Finiquitador</h2>
             <p>Ingreso guiado, calculo simplificado y envio simulado a Direccion del Trabajo o Notaria.</p>
           </div>
@@ -1212,7 +1617,7 @@
               <div><label class="label" for="settlementSchool">Colegio</label><select id="settlementSchool"></select></div>
               <div><label class="label" for="settlementRole">Funcion</label><select id="settlementRole"></select></div>
               <div><label class="label" for="settlementStart">Inicio del contrato</label><input id="settlementStart" type="date"></div>
-              <div class="settlement-attention">
+              <div class="settlement-attention" id="settlementAttention">
                 <h4>Seleccion clave para cierre</h4>
                 <p>Estos dos campos deben ser definidos al momento de desvincular: fecha exacta y causal aplicable.</p>
                 <div class="attention-grid">
@@ -1271,7 +1676,7 @@
       <section id="disabilitiesView" class="view">
         <div class="view-head">
           <div>
-            <div class="eyebrow">Modulo 4</div>
+            <div class="eyebrow">Modulo 5</div>
             <h2>Inhabilitador</h2>
             <p>Verificacion simulada de RUTs para trabajo con menores, con carga masiva o individual.</p>
           </div>
@@ -1413,9 +1818,92 @@
         { label: "Riesgo de cumplimiento", value: 31, text: "bajo, con 3 focos abiertos" }
       ],
       dashboardAlerts: [
-        { title: "3 reportes MINEDUC siguen abiertos", meta: "2 SEP y 1 PIE", tone: "warn" },
-        { title: "4 finiquitos requieren causal exacta", meta: "bloquea descarga final", tone: "danger" },
-        { title: "14 contratos listos para emitir", meta: "autocompletados desde Nubox", tone: "ok" }
+        {
+          title: "3 reportes MINEDUC siguen abiertos",
+          meta: "2 SEP y 1 PIE con diferencia de cuadratura",
+          tone: "warn",
+          badge: "Seguimiento prioritario",
+          story: "La cuadratura operacional muestra 3 establecimientos con archivos listos, pero aun falta validar una diferencia menor en remuneraciones antes del envio consolidado.",
+          owner: "Mesa RRHH + Finanzas",
+          ownerNote: "Seguimiento hoy 16:30 con sostenedor.",
+          impactValue: "3 colegios",
+          impactNote: "afectados en el cierre del periodo",
+          riskValue: "$4.8M",
+          riskNote: "monto observado en revision ficticia",
+          deadlineValue: "Hoy 18:00",
+          deadlineNote: "ventana sugerida para liberar archivos",
+          schools: [
+            { name: "Colegio San Ignacio", detail: "SEP marzo con diferencia de 2 docentes y honorarios pendientes.", status: "En revision", tone: "warn" },
+            { name: "Escuela Villa Las Americas", detail: "PIE con compra observada por centro de costo incompleto.", status: "Pendiente", tone: "danger" },
+            { name: "Colegio Padre Hurtado", detail: "Remuneraciones listas, falta confirmacion final de sostenedor.", status: "Listo para liberar", tone: "ok" }
+          ],
+          timeline: [
+            { title: "Cruce de remuneraciones", detail: "Comparar archivo demo versus cuadratura cargada en el panel.", state: "Completado", tone: "ok" },
+            { title: "Validar compra PIE", detail: "Confirmar documento soporte y centro de costo de la observacion.", state: "En curso", tone: "warn" },
+            { title: "Liberar envio MINEDUC", detail: "Descargar paquete final con los 3 CSV y respaldo visual.", state: "Siguiente paso", tone: "danger" }
+          ],
+          ctaLabel: "Ir al flujo MINEDUC",
+          view: "mineduc",
+          step: 2,
+          tab: "remuneraciones",
+          target: "#mineducStep2"
+        },
+        {
+          title: "4 finiquitos requieren causal exacta",
+          meta: "bloquea descarga final y firma simulada",
+          tone: "danger",
+          badge: "Riesgo alto",
+          story: "El lote de finiquitos tiene informacion Nubox importada, pero 4 casos siguen sin causal legal exacta y fecha de desvinculacion cerrada, por lo que el documento no deberia salir a firma.",
+          owner: "Coordinacion legal laboral",
+          ownerNote: "Hay 2 casos listos para cierre hoy.",
+          impactValue: "4 documentos",
+          impactNote: "finiquitos detenidos por validacion legal",
+          riskValue: "48 hrs",
+          riskNote: "retraso potencial del cierre de desvinculacion",
+          deadlineValue: "25 junio",
+          deadlineNote: "fecha sugerida de regularizacion demo",
+          schools: [
+            { name: "Colegio Padre Hurtado", detail: "Falta confirmar articulo de causal y fecha de notificacion.", status: "Bloqueado", tone: "danger" },
+            { name: "Corporacion Las Condes", detail: "Desvinculacion lista, pero sin fecha final validada por direccion.", status: "En revision", tone: "warn" },
+            { name: "Escuela Espana", detail: "Documento practicamente listo, falta check final de causal.", status: "Casi listo", tone: "ok" }
+          ],
+          timeline: [
+            { title: "Importacion Nubox", detail: "Datos personales y empleador ya consolidados desde el demo.", state: "Completado", tone: "ok" },
+            { title: "Definir causal y fecha", detail: "Seleccion obligatoria marcada para completar el finiquito.", state: "En curso", tone: "danger" },
+            { title: "Emitir PDF final", detail: "Descarga disponible una vez cerrados ambos campos.", state: "Siguiente paso", tone: "warn" }
+          ],
+          ctaLabel: "Ir a finiquitos",
+          view: "settlement",
+          target: "#settlementAttention"
+        },
+        {
+          title: "14 contratos listos para emitir",
+          meta: "autocompletados desde Nubox y validados en preview",
+          tone: "ok",
+          badge: "Listo para emision",
+          story: "La cola de contratos y anexos ya esta poblada con datos ficticios desde Nubox. Solo queda revisar el documento final y emitir el lote priorizado para firma.",
+          owner: "Analista documental",
+          ownerNote: "Se priorizan 6 ingresos para esta manana.",
+          impactValue: "14 contratos",
+          impactNote: "documentos completos y con preview listo",
+          riskValue: "6 ingresos",
+          riskNote: "casos que parten esta semana",
+          deadlineValue: "Hoy 12:30",
+          deadlineNote: "ventana ideal para emitir y compartir",
+          schools: [
+            { name: "Colegio Padre Hurtado", detail: "5 contratos individuales y 1 anexo de cambio de cargo listos.", status: "Listo", tone: "ok" },
+            { name: "Escuela Villa Las Americas", detail: "4 contratos con jornada y fuente ya validadas.", status: "Listo", tone: "ok" },
+            { name: "Colegio San Ignacio", detail: "3 contratos pendientes solo de revision visual final.", status: "Seguimiento", tone: "warn" }
+          ],
+          timeline: [
+            { title: "Importar trabajador", detail: "RUT demo y datos Nubox ya disponibles en el formulario.", state: "Completado", tone: "ok" },
+            { title: "Validar preview legal", detail: "Revisar cargo, jornada y clausulas destacadas antes de descargar.", state: "En curso", tone: "warn" },
+            { title: "Emitir documento Word", detail: "Descarga simulada lista para el lote priorizado.", state: "Siguiente paso", tone: "ok" }
+          ],
+          ctaLabel: "Ir a contratos",
+          view: "contracts",
+          target: "#contractImportBlock"
+        }
       ],
       schools: [
         { id: 1, name: "Colegio San Ignacio de Lo Barnechea", rbd: "24531-6" },
@@ -1703,6 +2191,7 @@
 
     const state = {
       currentView: "dashboard",
+      selectedAlertIndex: 0,
       mineducStep: 1,
       mineducTab: "remuneraciones",
       validationDone: false,
@@ -1717,14 +2206,16 @@
 
     const modules = [
       { id: "dashboard", title: "Dashboard", desc: "Resumen ejecutivo", count: "00" },
-      { id: "mineduc", title: "MINEDUC", desc: "5 pasos guiados", count: "01" },
-      { id: "contracts", title: "Contratos", desc: "Formularios y preview", count: "02" },
-      { id: "settlement", title: "Finiquitos", desc: "Calculo y envio", count: "03" },
-      { id: "disabilities", title: "Inhabilidades", desc: "Verificacion masiva", count: "04" }
+      { id: "alerts", title: "Alertas", desc: "Centro visual", count: "01" },
+      { id: "mineduc", title: "MINEDUC", desc: "5 pasos guiados", count: "02" },
+      { id: "contracts", title: "Contratos", desc: "Formularios y preview", count: "03" },
+      { id: "settlement", title: "Finiquitos", desc: "Calculo y envio", count: "04" },
+      { id: "disabilities", title: "Inhabilidades", desc: "Verificacion masiva", count: "05" }
     ];
 
     const views = {
       dashboard: document.getElementById("dashboardView"),
+      alerts: document.getElementById("alertsView"),
       mineduc: document.getElementById("mineducView"),
       contracts: document.getElementById("contractsView"),
       settlement: document.getElementById("settlementView"),
@@ -1909,7 +2400,147 @@
       state.currentView = viewId;
       Object.entries(views).forEach(([id, node]) => node.classList.toggle("active", id === viewId));
       document.querySelectorAll(".nav-btn").forEach((btn) => btn.classList.toggle("active", btn.dataset.view === viewId));
+      if (viewId === "alerts") renderAlertsCenter();
       window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+
+    function clearDetailFocus() {
+      document.querySelectorAll(".detail-focus").forEach((node) => node.classList.remove("detail-focus"));
+    }
+
+    function focusDetailTarget(selector) {
+      if (!selector) return;
+      const target = document.querySelector(selector);
+      if (!target) return;
+      clearDetailFocus();
+      target.classList.add("detail-focus");
+      target.scrollIntoView({ behavior: "smooth", block: "start" });
+      setTimeout(() => target.classList.remove("detail-focus"), 2600);
+    }
+
+    function openDashboardAlertModule(index) {
+      const alert = data.dashboardAlerts[index];
+      if (!alert) return;
+      showView(alert.view);
+      if (alert.view === "mineduc" && alert.step) {
+        if (alert.tab) state.mineducTab = alert.tab;
+        setMineducStep(alert.step);
+        renderDataTabs();
+      }
+      setTimeout(() => focusDetailTarget(alert.target), 220);
+    }
+
+    function renderAlertDetail(targetId, alert, index) {
+      const detail = document.getElementById(targetId);
+      if (!detail || !alert) return;
+      detail.innerHTML = `
+        <div class="dashboard-alert-detail-head">
+          <div>
+            <span class="dashboard-alert-badge ${alert.tone}">${alert.badge}</span>
+            <h4>${alert.title}</h4>
+            <p>${alert.story}</p>
+          </div>
+          <div class="dashboard-alert-owner">
+            <span>Responsable demo</span>
+            <strong>${alert.owner}</strong>
+            <p>${alert.ownerNote}</p>
+          </div>
+        </div>
+        <div class="dashboard-alert-kpis">
+          <div class="dashboard-alert-kpi">
+            <span>Impacto</span>
+            <strong class="mono">${alert.impactValue}</strong>
+            <p>${alert.impactNote}</p>
+          </div>
+          <div class="dashboard-alert-kpi">
+            <span>Magnitud</span>
+            <strong class="mono">${alert.riskValue}</strong>
+            <p>${alert.riskNote}</p>
+          </div>
+          <div class="dashboard-alert-kpi">
+            <span>Ventana</span>
+            <strong class="mono">${alert.deadlineValue}</strong>
+            <p>${alert.deadlineNote}</p>
+          </div>
+        </div>
+        <div class="dashboard-alert-detail-grid">
+          <div class="dashboard-alert-block">
+            <span>Colegios involucrados</span>
+            <h5>Detalle ficticio por establecimiento</h5>
+            <div class="dashboard-alert-school-list">
+              ${alert.schools.map((school) => `
+                <div class="dashboard-alert-school">
+                  <div>
+                    <span>Establecimiento</span>
+                    <strong>${school.name}</strong>
+                    <p>${school.detail}</p>
+                  </div>
+                  <div class="dashboard-alert-pill ${school.tone}">${school.status}</div>
+                </div>
+              `).join("")}
+            </div>
+          </div>
+          <div class="dashboard-alert-block">
+            <span>Plan sugerido</span>
+            <h5>Secuencia de resolucion</h5>
+            <div class="dashboard-alert-timeline">
+              ${alert.timeline.map((step) => `
+                <div class="dashboard-alert-step">
+                  <div>
+                    <span>${step.state}</span>
+                    <strong>${step.title}</strong>
+                    <p>${step.detail}</p>
+                  </div>
+                  <div class="dashboard-alert-pill ${step.tone}">${step.state}</div>
+                </div>
+              `).join("")}
+            </div>
+          </div>
+        </div>
+        <div class="dashboard-alert-actions">
+          <button type="button" class="btn btn-primary" data-alert-open-module="${index}">${alert.ctaLabel}</button>
+          <button type="button" class="btn btn-secondary" disabled>Detalle demo consolidado</button>
+        </div>
+      `;
+      document.querySelectorAll("#alertsMenuList [data-alert-index]").forEach((btn) => {
+        btn.classList.toggle("active", Number(btn.dataset.alertIndex) === index);
+      });
+      detail.querySelectorAll("[data-alert-open-module]").forEach((btn) => {
+        btn.addEventListener("click", () => openDashboardAlertModule(Number(btn.dataset.alertOpenModule)));
+      });
+    }
+
+    function renderAlertsCenter() {
+      const menu = document.getElementById("alertsMenuList");
+      if (!menu) return;
+      menu.innerHTML = data.dashboardAlerts.map((item, index) => `
+        <button type="button" class="dashboard-alert-item ${item.tone}" data-alert-index="${index}">
+          <div class="dashboard-alert-head">
+            <span>${item.tone === "danger" ? "Atencion" : item.tone === "warn" ? "Seguimiento" : "Listo"}</span>
+            <strong>${item.title}</strong>
+          </div>
+          <p>${item.meta}</p>
+        </button>
+      `).join("");
+      menu.querySelectorAll("[data-alert-index]").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          state.selectedAlertIndex = Number(btn.dataset.alertIndex);
+          renderAlertsCenter();
+        });
+      });
+      const selectedIndex = Math.min(state.selectedAlertIndex, data.dashboardAlerts.length - 1);
+      state.selectedAlertIndex = selectedIndex;
+      renderAlertDetail("alertsDetail", data.dashboardAlerts[selectedIndex], selectedIndex);
+    }
+
+    function openAlertCenter(index = 0) {
+      state.selectedAlertIndex = index;
+      showView("alerts");
+    }
+
+    function openDashboardAlert(index) {
+      if (!data.dashboardAlerts[index]) return;
+      openAlertCenter(index);
     }
 
     function renderNav() {
@@ -2038,15 +2669,18 @@
       `).join("");
 
       const summary = document.getElementById("dashboardSummary");
-      summary.innerHTML = data.dashboardAlerts.map((item) => `
-        <div class="dashboard-alert-item ${item.tone}">
+      summary.innerHTML = data.dashboardAlerts.map((item, index) => `
+        <button type="button" class="dashboard-alert-item ${item.tone}" data-alert-index="${index}">
           <div class="dashboard-alert-head">
             <span>${item.tone === "danger" ? "Atencion" : item.tone === "warn" ? "Seguimiento" : "Listo"}</span>
             <strong>${item.title}</strong>
           </div>
           <p>${item.meta}</p>
-        </div>
+        </button>
       `).join("");
+      summary.querySelectorAll("[data-alert-index]").forEach((btn) => {
+        btn.addEventListener("click", () => openDashboardAlert(Number(btn.dataset.alertIndex)));
+      });
     }
 
     function populateCommonOptions() {
@@ -3196,6 +3830,7 @@
     function init() {
       renderNav();
       renderDashboard();
+      renderAlertsCenter();
       populateCommonOptions();
       renderMineducStepper();
       renderDataTabs();

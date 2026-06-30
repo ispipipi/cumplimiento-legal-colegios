@@ -210,6 +210,359 @@
       gap: 1.15rem;
     }
 
+    .mineduc-concept-shell {
+      margin-top: 1rem;
+      padding: 1rem;
+      border-radius: 22px;
+      border: 1px solid #dbe4f0;
+      background:
+        radial-gradient(circle at top right, rgba(37, 99, 235, 0.08), transparent 30%),
+        linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+      box-shadow: 0 16px 32px rgba(15, 23, 42, 0.06);
+    }
+
+    .mineduc-concept-head {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .mineduc-concept-head h3,
+    .mineduc-concept-bridge h3 {
+      font-size: 1rem;
+      color: #0f172a;
+    }
+
+    .mineduc-concept-head p,
+    .mineduc-concept-bridge p {
+      margin-top: 0.35rem;
+      color: var(--text-soft);
+      line-height: 1.55;
+      font-size: 0.84rem;
+    }
+
+    .mineduc-concept-kpis {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0.8rem;
+      margin-top: 1rem;
+    }
+
+    .mineduc-concept-kpi {
+      padding: 0.9rem 0.95rem;
+      border-radius: 18px;
+      border: 1px solid #dbe4f0;
+      background: rgba(255, 255, 255, 0.92);
+    }
+
+    .mineduc-concept-kpi span,
+    .mineduc-concept-card span,
+    .mineduc-concept-bridge-item span {
+      display: block;
+      font-size: 0.7rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #64748b;
+    }
+
+    .mineduc-concept-kpi strong,
+    .mineduc-concept-bridge-item strong {
+      display: block;
+      margin-top: 0.4rem;
+      color: #0f172a;
+      letter-spacing: -0.05em;
+    }
+
+    .mineduc-concept-kpi strong {
+      font-size: 1.5rem;
+    }
+
+    .mineduc-concept-kpi p,
+    .mineduc-concept-bridge-item p {
+      margin-top: 0.28rem;
+      color: var(--text-soft);
+      font-size: 0.8rem;
+    }
+
+    .mineduc-concept-grid {
+      display: grid;
+      grid-template-columns: minmax(320px, 0.95fr) minmax(0, 1.05fr);
+      gap: 1rem;
+      margin-top: 1rem;
+      align-items: start;
+    }
+
+    .mineduc-concept-list {
+      display: grid;
+      gap: 0.7rem;
+    }
+
+    .mineduc-concept-card,
+    .mineduc-concept-editor,
+    .mineduc-concept-bridge {
+      padding: 1rem;
+      border-radius: 20px;
+      border: 1px solid #dbe4f0;
+      background: #fff;
+    }
+
+    .mineduc-concept-card {
+      text-align: left;
+      transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+    }
+
+    .mineduc-concept-card:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 14px 28px rgba(15, 23, 42, 0.07);
+      border-color: #93c5fd;
+    }
+
+    .mineduc-concept-card.active {
+      border-color: #60a5fa;
+      box-shadow: 0 16px 32px rgba(37, 99, 235, 0.12);
+    }
+
+    .mineduc-concept-card h4 {
+      margin-top: 0.38rem;
+      font-size: 1rem;
+      color: #0f172a;
+    }
+
+    .mineduc-concept-card p,
+    .mineduc-concept-source p {
+      margin-top: 0.35rem;
+      color: var(--text-soft);
+      font-size: 0.82rem;
+      line-height: 1.48;
+    }
+
+    .mineduc-concept-meta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.7rem;
+      margin-top: 0.75rem;
+      flex-wrap: wrap;
+    }
+
+    .mineduc-concept-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem;
+    }
+
+    .mineduc-concept-tag {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.35rem 0.65rem;
+      border-radius: 999px;
+      background: #eff6ff;
+      color: #1d4ed8;
+      font-size: 0.72rem;
+      font-weight: 700;
+    }
+
+    .mineduc-concept-status {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.38rem 0.68rem;
+      border-radius: 999px;
+      font-size: 0.72rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .mineduc-concept-status.ready {
+      background: #dcfce7;
+      color: #166534;
+    }
+
+    .mineduc-concept-status.review {
+      background: #fef3c7;
+      color: #b45309;
+    }
+
+    .mineduc-concept-status.new {
+      background: #dbeafe;
+      color: #1d4ed8;
+    }
+
+    .mineduc-concept-editor .form-grid {
+      margin-top: 1rem;
+    }
+
+    .mineduc-concept-editor textarea {
+      min-height: 110px;
+    }
+
+    .mineduc-concept-source {
+      padding: 0.85rem 0.95rem;
+      border-radius: 16px;
+      border: 1px solid #dbe4f0;
+      background: #f8fbff;
+    }
+
+    .mineduc-concept-source strong {
+      display: block;
+      margin-top: 0.35rem;
+      color: #0f172a;
+    }
+
+    .mineduc-concept-bridge {
+      margin-bottom: 1rem;
+      background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+    }
+
+    .mineduc-concept-bridge-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0.8rem;
+      margin-top: 0.95rem;
+    }
+
+    .detailed-payroll-kpis {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 0.8rem;
+      margin-bottom: 1rem;
+    }
+
+    .detailed-payroll-kpi {
+      padding: 0.95rem 1rem;
+      border-radius: 18px;
+      border: 1px solid #dbe4f0;
+      background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+    }
+
+    .detailed-payroll-kpi span {
+      display: block;
+      font-size: 0.7rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #64748b;
+    }
+
+    .detailed-payroll-kpi strong {
+      display: block;
+      margin-top: 0.4rem;
+      font-size: 1.38rem;
+      letter-spacing: -0.05em;
+      color: #0f172a;
+    }
+
+    .detailed-payroll-kpi p {
+      margin-top: 0.3rem;
+      color: var(--text-soft);
+      font-size: 0.8rem;
+      line-height: 1.45;
+    }
+
+    .settlement-efsa-card {
+      grid-column: 1 / -1;
+      padding: 1rem;
+      border-radius: 18px;
+      border: 1px solid #dbe4f0;
+      background:
+        radial-gradient(circle at top right, rgba(15, 118, 110, 0.1), transparent 28%),
+        linear-gradient(180deg, #ffffff 0%, #f5fbfa 100%);
+    }
+
+    .settlement-efsa-head {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .settlement-efsa-head h4 {
+      font-size: 0.98rem;
+      color: #0f172a;
+    }
+
+    .settlement-efsa-head p,
+    .settlement-efsa-status,
+    .settlement-efsa-item p {
+      color: var(--text-soft);
+      line-height: 1.5;
+      font-size: 0.82rem;
+    }
+
+    .settlement-efsa-status {
+      margin-top: 0.65rem;
+    }
+
+    .settlement-efsa-status.ok {
+      color: #0f766e;
+    }
+
+    .settlement-efsa-status.warn {
+      color: #c2410c;
+    }
+
+    .settlement-efsa-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 0.8rem;
+      margin-top: 0.95rem;
+    }
+
+    .settlement-efsa-item {
+      padding: 0.9rem 0.95rem;
+      border-radius: 16px;
+      border: 1px solid #dbe4f0;
+      background: rgba(255, 255, 255, 0.92);
+    }
+
+    .settlement-efsa-item span {
+      display: block;
+      font-size: 0.7rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #64748b;
+    }
+
+    .settlement-efsa-item strong {
+      display: block;
+      margin-top: 0.4rem;
+      font-size: 1.08rem;
+      letter-spacing: -0.04em;
+      color: #0f172a;
+    }
+
+    .settlement-efsa-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.7rem;
+      margin-top: 0.95rem;
+    }
+
+    .settlement-route-note {
+      grid-column: 1 / -1;
+      padding: 0.95rem 1rem;
+      border-radius: 16px;
+      border: 1px solid #dbe4f0;
+      background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+    }
+
+    .settlement-route-note strong {
+      display: block;
+      margin-bottom: 0.3rem;
+      color: #0f172a;
+    }
+
+    .settlement-route-note p {
+      color: var(--text-soft);
+      font-size: 0.82rem;
+      line-height: 1.55;
+    }
+
     .dashboard-shell {
       display: grid;
       gap: 1rem;
@@ -1104,6 +1457,9 @@
       .dashboard-funding-wrap,
       .dashboard-alert-kpis,
       .dashboard-alert-detail-grid,
+      .mineduc-concept-kpis,
+      .mineduc-concept-grid,
+      .mineduc-concept-bridge-grid,
       .alerts-center-grid,
       .alerts-overview-grid {
         grid-template-columns: 1fr;
@@ -1321,7 +1677,7 @@
           <div class="card-head">
             <div>
               <h3>Paso 1 - Seleccion de colegio y periodo</h3>
-              <p>El flujo carga con 5 colegios ficticios y periodos entre enero y marzo 2026.</p>
+              <p>El flujo carga con 5 colegios ficticios y periodos entre enero y marzo 2026, y ahora deja visible como se interpreta el insumo crudo antes de procesarlo.</p>
             </div>
             <span class="badge warn">Pendiente</span>
           </div>
@@ -1335,6 +1691,22 @@
               <select id="periodSelect"></select>
             </div>
           </div>
+          <div class="mineduc-concept-shell">
+            <div class="mineduc-concept-head">
+              <div>
+                <h3>Mantenedor de conceptos Nubox</h3>
+                <p>La exportacion cruda sigue siendo la fuente de verdad. Aqui se define como interpretar cada concepto para que el procesamiento sea flexible aunque cambien los nombres o aparezcan bonos nuevos.</p>
+              </div>
+              <div class="actions">
+                <button class="btn btn-secondary" type="button" id="addMineducConcept">Agregar concepto nuevo</button>
+              </div>
+            </div>
+            <div class="mineduc-concept-kpis" id="mineducConceptKpis"></div>
+            <div class="mineduc-concept-grid">
+              <div class="mineduc-concept-list" id="mineducConceptList"></div>
+              <div class="mineduc-concept-editor" id="mineducConceptEditor"></div>
+            </div>
+          </div>
           <div class="actions" style="margin-top: 1rem;">
             <button class="btn btn-primary" id="loadMineducData">Cargar datos</button>
           </div>
@@ -1344,10 +1716,11 @@
           <div class="card-head">
             <div>
               <h3>Paso 2 - Revision de datos fuente</h3>
-              <p>Tablas ficticias de remuneraciones, compras y honorarios listas para revisar.</p>
+              <p>Tablas ficticias de remuneraciones, compras y honorarios listas para revisar, conectadas con el mantenedor previo de interpretacion.</p>
             </div>
             <span class="badge ok">Datos cargados</span>
           </div>
+          <div class="mineduc-concept-bridge" id="mineducConceptBridge"></div>
           <div class="tabs" id="dataTabs"></div>
           <div id="dataPanels"></div>
           <div class="actions" style="margin-top: 1rem;">
@@ -1400,6 +1773,40 @@
                 </table>
               </div>
             </div>
+            <div class="card" style="margin-top:1rem;">
+              <div class="card-head">
+                <div>
+                  <h3>Libro de remuneraciones detallado</h3>
+                  <p>Producto adicional para cliente con costo empresa, mezcla por fuente y trazabilidad por trabajador.</p>
+                </div>
+                <span class="badge ok">Entregable cliente</span>
+              </div>
+              <div class="detailed-payroll-kpis" id="detailedPayrollKpis"></div>
+              <div class="table-wrap">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>RUT</th>
+                      <th>Trabajador</th>
+                      <th>Cargo</th>
+                      <th>Haberes</th>
+                      <th>Liquido</th>
+                      <th>General</th>
+                      <th>SEP</th>
+                      <th>PIE</th>
+                      <th>Aportes patronales</th>
+                      <th>Costo empresa</th>
+                      <th>Criterio</th>
+                    </tr>
+                  </thead>
+                  <tbody id="detailedPayrollRows"></tbody>
+                </table>
+              </div>
+              <div class="actions" style="margin-top: 1rem;">
+                <button class="btn btn-primary" id="downloadDetailedPayroll">Descargar libro detallado (CSV)</button>
+                <button class="btn btn-secondary" id="downloadDetailedPayrollReport">Ver resumen cliente</button>
+              </div>
+            </div>
             <div id="mineducExportsPanel" class="card hidden" style="margin-top:1rem;">
               <div class="card-head">
                 <div>
@@ -1438,12 +1845,12 @@
           <div class="card-head">
             <div>
               <h3>Paso 5 - Carga automatizada simulada</h3>
-              <p>Conexion mock con la plataforma de la Superintendencia de Educacion.</p>
+              <p>Conexion mock con la plataforma del Ministerio de Educacion.</p>
             </div>
           </div>
           <div id="uploadFlow" class="processing-box">
             <div class="loader"></div>
-            <h3>Conectando con plataforma Superintendencia de Educacion...</h3>
+            <h3>Conectando con plataforma Ministerio de Educacion...</h3>
             <p>Preparando carga de archivos y registrando folio de recepcion.</p>
             <div class="progress" style="margin-top: 1rem;">
               <div class="progress-bar" id="uploadBar"></div>
@@ -1638,6 +2045,48 @@
               <div><label class="label" for="settlementContractType">Tipo de contrato</label><select id="settlementContractType"><option>Plazo fijo</option><option>Indefinido</option></select></div>
               <div><label class="label" for="settlementBaseSalary">Sueldo base mensual</label><input id="settlementBaseSalary" type="number" min="0" value="840000"></div>
               <div><label class="label" for="settlementAvgSalary">Promedio ultimas 3 remuneraciones</label><input id="settlementAvgSalary" type="number" min="0" value="840000"></div>
+              <div class="settlement-efsa-card">
+                <div class="settlement-efsa-head">
+                  <div>
+                    <h4>Respaldo EFSA via Filiere FC</h4>
+                    <p>Trae cotizaciones, certificado y monto sugerido de descuento para dejar respaldo del calculo y decidir si se aplica o no al cierre.</p>
+                  </div>
+                  <button type="button" class="btn btn-secondary" id="importSettlementEfsa">
+                    <span>Importar EFSA con Filiere FC</span>
+                  </button>
+                </div>
+                <p id="settlementEfsaStatus" class="settlement-efsa-status">Selecciona un RUT demo para consultar respaldo EFSA y certificado asociado.</p>
+                <div class="settlement-efsa-grid" id="settlementEfsaGrid">
+                  <div class="settlement-efsa-item">
+                    <span>Estado</span>
+                    <strong>Pendiente</strong>
+                    <p>Sin consulta realizada.</p>
+                  </div>
+                  <div class="settlement-efsa-item">
+                    <span>Descuento sugerido</span>
+                    <strong class="mono">$0</strong>
+                    <p>Se aplicara solo si activas la opcion.</p>
+                  </div>
+                  <div class="settlement-efsa-item">
+                    <span>Aporte empleador</span>
+                    <strong class="mono">$0</strong>
+                    <p>Respaldo para trazabilidad interna.</p>
+                  </div>
+                  <div class="settlement-efsa-item">
+                    <span>Certificado</span>
+                    <strong>Sin documento</strong>
+                    <p>Disponible despues de la importacion demo.</p>
+                  </div>
+                </div>
+                <div class="field-inline" style="margin-top: 1rem; flex-wrap: wrap;">
+                  <input id="settlementApplyEfsa" type="checkbox">
+                  <label for="settlementApplyEfsa">Aplicar descuento EFSA al total del finiquito</label>
+                </div>
+                <div class="settlement-efsa-actions">
+                  <button type="button" class="btn btn-secondary" id="viewSettlementEfsaCert">Ver certificado EFSA</button>
+                  <button type="button" class="btn btn-secondary" id="downloadSettlementEfsaCert">Descargar certificado EFSA</button>
+                </div>
+              </div>
               <div style="grid-column: 1 / -1;">
                 <span class="label">Tipo de tramitacion</span>
                 <div class="field-inline" style="flex-wrap: wrap;">
@@ -1645,6 +2094,7 @@
                   <input id="tramNotary" type="radio" name="tramitation" value="Notaria"><label for="tramNotary">Notaria</label>
                 </div>
               </div>
+              <div class="settlement-route-note" id="settlementRouteNote"></div>
             </form>
             <div class="actions" style="margin-top: 1rem;">
               <button class="btn btn-primary" id="calculateSettlement">Calcular Finiquito</button>
@@ -1685,12 +2135,17 @@
           </div>
         </div>
 
+        <div class="alert-banner">
+          <strong>Atencion con coincidencia exacta de nombres</strong>
+          El servicio oficial es estricto con el nombre completo. Si en la base figura "Maria del Carmen" y se consulta como "Maria Carmen", la revision puede quedar pendiente aunque el RUT sea correcto.
+        </div>
+
         <div class="card">
           <div class="tabs" id="inputTabs"></div>
           <div id="bulkPanel" class="tab-panel active" style="margin-top: 1rem;">
             <label class="label" for="bulkRutInput">Carga masiva</label>
             <textarea id="bulkRutInput" placeholder="12.345.678-9&#10;13.456.789-0&#10;14.567.890-1"></textarea>
-            <p style="margin-top: 0.7rem; color: var(--text-soft); font-size: 0.84rem;">Formatos aceptados: 12.345.678-9 | 12345678-9 | 123456789</p>
+            <p style="margin-top: 0.7rem; color: var(--text-soft); font-size: 0.84rem;">Formatos aceptados: 12.345.678-9 | 12345678-9 | 123456789. Si luego agregas nombre en revisiones individuales, debe coincidir exactamente con el registro oficial.</p>
             <div class="actions" style="margin-top: 1rem;">
               <button class="btn btn-primary" id="verifyBulk">Verificar todos</button>
             </div>
@@ -1701,6 +2156,7 @@
               <div><label class="label" for="singleRut">RUT</label><input id="singleRut"></div>
               <div><label class="label" for="singleName">Nombre</label><input id="singleName"></div>
             </div>
+            <p style="margin-top: 0.7rem; color: var(--text-soft); font-size: 0.84rem;">Ejemplo sensible: "Maria del Carmen" no coincide con "Maria Carmen".</p>
             <div class="actions" style="margin-top: 1rem;">
               <button class="btn btn-primary" id="addSinglePerson">Agregar a lista</button>
             </div>
@@ -2111,10 +2567,107 @@
           settlementAvgSalary: "560000"
         }
       },
+      settlementEfsaProfiles: {
+        "256789012": {
+          certificateId: "EFSA-2026-44017",
+          source: "Filiere FC",
+          coveredPeriod: "Enero 2026 a Junio 2026",
+          workerDeduction: 186000,
+          employerContribution: 74200,
+          supportNote: "Certificado recuperado con cotizaciones informadas y saldo regularizable previo a firma.",
+          status: "Respaldo completo"
+        },
+        "134567890": {
+          certificateId: "EFSA-2026-44018",
+          source: "Filiere FC",
+          coveredPeriod: "Febrero 2026 a Junio 2026",
+          workerDeduction: 98000,
+          employerContribution: 42100,
+          supportNote: "Caso con descuento sugerido menor y documento listo para adjuntar a carpeta del finiquito.",
+          status: "Respaldo completo"
+        },
+        "145678901": {
+          certificateId: "EFSA-2026-44019",
+          source: "Filiere FC",
+          coveredPeriod: "Marzo 2026 a Junio 2026",
+          workerDeduction: 0,
+          employerContribution: 55800,
+          supportNote: "Sin descuento a trabajador. Solo respaldo de cotizaciones y regularizacion empleador.",
+          status: "Solo respaldo empleador"
+        },
+        "178901234": {
+          certificateId: "EFSA-2026-44020",
+          source: "Filiere FC",
+          coveredPeriod: "Marzo 2025 a Junio 2026",
+          workerDeduction: 214000,
+          employerContribution: 89600,
+          supportNote: "Certificado sugiere descuento EFSA aplicable, sujeto a confirmacion del estudio.",
+          status: "Respaldo completo"
+        },
+        "189012345": {
+          certificateId: "EFSA-2026-44021",
+          source: "Filiere FC",
+          coveredPeriod: "Agosto 2025 a Junio 2026",
+          workerDeduction: 123000,
+          employerContribution: 46800,
+          supportNote: "Cotizaciones levantadas con respaldo util para anexar a expediente y sustentar el calculo.",
+          status: "Respaldo completo"
+        }
+      },
       mineducTabs: [
         { id: "remuneraciones", label: "Remuneraciones" },
         { id: "compras", label: "Compras" },
         { id: "honorarios", label: "Honorarios" }
+      ],
+      mineducConcepts: [
+        {
+          id: "concept-1",
+          sourceName: "Bono responsabilidad",
+          category: "Haberes remuneracionales",
+          imponible: "Si",
+          tributable: "Si",
+          distributionRule: "Proporcional al imponible",
+          targetAccount: "410129",
+          status: "ready",
+          lastUse: "Usado en 4 colegios",
+          note: "Se comporta como haber imponible y debe prorratearse segun la distribucion de la base imponible del trabajador."
+        },
+        {
+          id: "concept-2",
+          sourceName: "Movilizacion SEP apoyo aula",
+          category: "Asignacion no imponible",
+          imponible: "No",
+          tributable: "No",
+          distributionRule: "SEP directo",
+          targetAccount: "410119",
+          status: "ready",
+          lastUse: "Usado en 2 colegios",
+          note: "Concepto ya homologado como colacion y movilizacion financiada 100% con SEP."
+        },
+        {
+          id: "concept-3",
+          sourceName: "Bono especial tres chanchitos",
+          category: "Haberes por revisar",
+          imponible: "Pendiente",
+          tributable: "Pendiente",
+          distributionRule: "Pendiente de clasificacion",
+          targetAccount: "Sin asignar",
+          status: "new",
+          lastUse: "Detectado este mes",
+          note: "Nuevo concepto detectado en Nubox. Se debe decidir si reemplaza un bono existente o si crea una regla nueva."
+        },
+        {
+          id: "concept-4",
+          sourceName: "Aporte AFC empleador",
+          category: "Costo empresa",
+          imponible: "No aplica",
+          tributable: "No",
+          distributionRule: "Proporcional al imponible",
+          targetAccount: "410402",
+          status: "review",
+          lastUse: "En revison legal",
+          note: "Se calcula sobre base imponible y luego se distribuye segun la mezcla General, SEP y PIE para construir el costo empresa."
+        }
       ],
       remuneraciones: [
         ["12.345.678-9", "Gonzalez Rojas, Carmen", "Docente de Aula", "44", "$850.000", "20", "8", "$1.240.000", "$248.000", "$992.000", "$620.000", "$450.000", "$170.000"],
@@ -2172,7 +2725,7 @@
         { rut: "13.456.789-0", name: "Martinez Soto, Pedro", state: "HABILITADO", detail: "Sin registros" },
         { rut: "14.567.890-1", name: "Fuentes Diaz, Ana", state: "HABILITADO", detail: "Sin registros" },
         { rut: "15.678.901-2", name: "Rojas Castillo, Luis", state: "HABILITADO", detail: "Sin registros" },
-        { rut: "16.789.012-3", name: "Herrera Munoz, Maria", state: "INHABILITADO", detail: "Ley 20.594 Art. 3 - Delito contra menores" },
+        { rut: "16.789.012-3", name: "Herrera Munoz, Maria del Carmen", state: "INHABILITADO", detail: "Ley 20.594 Art. 3 - Delito contra menores" },
         { rut: "17.890.123-4", name: "Soto Perez, Jorge", state: "HABILITADO", detail: "Sin registros" },
         { rut: "18.901.234-5", name: "Diaz Lopez, Patricia", state: "HABILITADO", detail: "Sin registros" },
         { rut: "19.012.345-6", name: "Castro Vera, Roberto", state: "PENDIENTE", detail: "Proceso judicial en curso - verificar en 30 dias" }
@@ -2194,12 +2747,16 @@
       selectedAlertIndex: 0,
       mineducStep: 1,
       mineducTab: "remuneraciones",
+      mineducConcepts: data.mineducConcepts.map((item) => ({ ...item })),
+      selectedMineducConceptId: "concept-1",
       validationDone: false,
       mineducGeneratedFiles: [],
       contractPreviewReady: false,
       contractMode: "contract",
       settlementSummaryReady: false,
       settlementSummaryData: null,
+      settlementEfsaData: null,
+      settlementEfsaRut: null,
       singleList: [],
       disabilityResults: []
     };
@@ -2697,9 +3254,211 @@
       document.getElementById("settlementCause").innerHTML = data.settlementCauses.map((cause) => `<option>${cause}</option>`).join("");
     }
 
+    function getMineducConceptCounts() {
+      const concepts = state.mineducConcepts;
+      return {
+        total: concepts.length,
+        ready: concepts.filter((item) => item.status === "ready").length,
+        review: concepts.filter((item) => item.status === "review").length,
+        fresh: concepts.filter((item) => item.status === "new").length
+      };
+    }
+
+    function getSelectedMineducConcept() {
+      return state.mineducConcepts.find((item) => item.id === state.selectedMineducConceptId) || state.mineducConcepts[0];
+    }
+
+    function renderMineducConceptMaintainer() {
+      const kpiWrap = document.getElementById("mineducConceptKpis");
+      const listWrap = document.getElementById("mineducConceptList");
+      const editorWrap = document.getElementById("mineducConceptEditor");
+      if (!kpiWrap || !listWrap || !editorWrap) return;
+
+      const counts = getMineducConceptCounts();
+      const selected = getSelectedMineducConcept();
+      if (!selected) return;
+
+      kpiWrap.innerHTML = `
+        <div class="mineduc-concept-kpi">
+          <span>Conceptos mapeados</span>
+          <strong class="mono">${counts.total}</strong>
+          <p>Conceptos crudos observados en la exportacion demo.</p>
+        </div>
+        <div class="mineduc-concept-kpi">
+          <span>Listos para proceso</span>
+          <strong class="mono">${counts.ready}</strong>
+          <p>Ya homologados y con regla estable.</p>
+        </div>
+        <div class="mineduc-concept-kpi">
+          <span>Requieren accion</span>
+          <strong class="mono">${counts.review + counts.fresh}</strong>
+          <p>${counts.review} en revision y ${counts.fresh} nuevos.</p>
+        </div>
+      `;
+
+      listWrap.innerHTML = state.mineducConcepts.map((concept) => `
+        <button type="button" class="mineduc-concept-card ${concept.id === selected.id ? "active" : ""}" data-concept-id="${concept.id}">
+          <span>Concepto Nubox</span>
+          <h4>${escapeHtml(concept.sourceName)}</h4>
+          <p>${escapeHtml(concept.note)}</p>
+          <div class="mineduc-concept-meta">
+            <div class="mineduc-concept-tags">
+              <div class="mineduc-concept-tag">${escapeHtml(concept.category)}</div>
+              <div class="mineduc-concept-tag">${escapeHtml(concept.distributionRule)}</div>
+            </div>
+            <div class="mineduc-concept-status ${concept.status}">${concept.status === "ready" ? "Listo" : concept.status === "review" ? "Revision" : "Nuevo"}</div>
+          </div>
+        </button>
+      `).join("");
+
+      editorWrap.innerHTML = `
+        <div class="mineduc-concept-source">
+          <span class="label">Fuente de verdad</span>
+          <strong>${escapeHtml(selected.sourceName)}</strong>
+          <p>${escapeHtml(selected.lastUse)}. La interpretacion de este concepto se guarda para las proximas cargas del mismo cliente.</p>
+        </div>
+        <div class="form-grid">
+          <div>
+            <label class="label" for="conceptSourceName">Nombre del concepto</label>
+            <input id="conceptSourceName" value="${escapeHtml(selected.sourceName)}">
+          </div>
+          <div>
+            <label class="label" for="conceptCategory">Categoria</label>
+            <select id="conceptCategory">
+              ${["Haberes remuneracionales", "Asignacion no imponible", "Costo empresa", "Haberes por revisar", "Compra", "Honorario"].map((option) => `<option ${selected.category === option ? "selected" : ""}>${option}</option>`).join("")}
+            </select>
+          </div>
+          <div>
+            <label class="label" for="conceptImponible">Imponible</label>
+            <select id="conceptImponible">
+              ${["Si", "No", "No aplica", "Pendiente"].map((option) => `<option ${selected.imponible === option ? "selected" : ""}>${option}</option>`).join("")}
+            </select>
+          </div>
+          <div>
+            <label class="label" for="conceptTributable">Tributable</label>
+            <select id="conceptTributable">
+              ${["Si", "No", "Pendiente"].map((option) => `<option ${selected.tributable === option ? "selected" : ""}>${option}</option>`).join("")}
+            </select>
+          </div>
+          <div>
+            <label class="label" for="conceptRule">Regla de distribucion</label>
+            <select id="conceptRule">
+              ${["Proporcional al imponible", "General directo", "SEP directo", "PIE directo", "Mixto configurable", "Pendiente de clasificacion"].map((option) => `<option ${selected.distributionRule === option ? "selected" : ""}>${option}</option>`).join("")}
+            </select>
+          </div>
+          <div>
+            <label class="label" for="conceptAccount">Cuenta destino</label>
+            <input id="conceptAccount" value="${escapeHtml(selected.targetAccount)}">
+          </div>
+          <div>
+            <label class="label" for="conceptStatus">Estado</label>
+            <select id="conceptStatus">
+              <option value="ready" ${selected.status === "ready" ? "selected" : ""}>Listo</option>
+              <option value="review" ${selected.status === "review" ? "selected" : ""}>En revision</option>
+              <option value="new" ${selected.status === "new" ? "selected" : ""}>Nuevo</option>
+            </select>
+          </div>
+          <div>
+            <label class="label" for="conceptLastUse">Contexto</label>
+            <input id="conceptLastUse" value="${escapeHtml(selected.lastUse)}">
+          </div>
+          <div style="grid-column: 1 / -1;">
+            <label class="label" for="conceptNote">Criterio de interpretacion</label>
+            <textarea id="conceptNote">${escapeHtml(selected.note)}</textarea>
+          </div>
+        </div>
+        <div class="actions" style="margin-top: 1rem;">
+          <button type="button" class="btn btn-primary" id="saveMineducConcept">Guardar interpretacion</button>
+          <button type="button" class="btn btn-secondary" id="validateMineducConcept">Marcar como validado</button>
+        </div>
+      `;
+
+      listWrap.querySelectorAll("[data-concept-id]").forEach((button) => {
+        button.addEventListener("click", () => {
+          state.selectedMineducConceptId = button.dataset.conceptId;
+          renderMineducConceptMaintainer();
+          renderMineducConceptBridge();
+        });
+      });
+
+      document.getElementById("saveMineducConcept").addEventListener("click", () => {
+        const concept = getSelectedMineducConcept();
+        if (!concept) return;
+        concept.sourceName = document.getElementById("conceptSourceName").value.trim() || concept.sourceName;
+        concept.category = document.getElementById("conceptCategory").value;
+        concept.imponible = document.getElementById("conceptImponible").value;
+        concept.tributable = document.getElementById("conceptTributable").value;
+        concept.distributionRule = document.getElementById("conceptRule").value;
+        concept.targetAccount = document.getElementById("conceptAccount").value.trim() || concept.targetAccount;
+        concept.status = document.getElementById("conceptStatus").value;
+        concept.lastUse = document.getElementById("conceptLastUse").value.trim() || concept.lastUse;
+        concept.note = document.getElementById("conceptNote").value.trim() || concept.note;
+        renderMineducConceptMaintainer();
+        renderMineducConceptBridge();
+      });
+
+      document.getElementById("validateMineducConcept").addEventListener("click", () => {
+        const concept = getSelectedMineducConcept();
+        if (!concept) return;
+        concept.status = "ready";
+        concept.lastUse = "Validado para esta demo";
+        renderMineducConceptMaintainer();
+        renderMineducConceptBridge();
+      });
+    }
+
+    function renderMineducConceptBridge() {
+      const bridge = document.getElementById("mineducConceptBridge");
+      if (!bridge) return;
+      const counts = getMineducConceptCounts();
+      const selected = getSelectedMineducConcept();
+      bridge.innerHTML = `
+        <div>
+          <h3>Resumen de interpretacion antes de revisar datos</h3>
+          <p>Este panel conecta la parametrizacion del insumo con los archivos fuente. Si un concepto cambia en Nubox o aparece uno nuevo, aqui se ajusta antes de procesar el resto.</p>
+        </div>
+        <div class="mineduc-concept-bridge-grid">
+          <div class="mineduc-concept-bridge-item">
+            <span>Listos</span>
+            <strong class="mono">${counts.ready}</strong>
+            <p>Conceptos ya homologados y aptos para generar CSV.</p>
+          </div>
+          <div class="mineduc-concept-bridge-item">
+            <span>Pendientes</span>
+            <strong class="mono">${counts.review + counts.fresh}</strong>
+            <p>Conviene revisar estos casos antes de cerrar la carga.</p>
+          </div>
+          <div class="mineduc-concept-bridge-item">
+            <span>Concepto activo</span>
+            <strong>${escapeHtml(selected ? selected.sourceName : "Sin seleccion")}</strong>
+            <p>${escapeHtml(selected ? `${selected.distributionRule} | cuenta ${selected.targetAccount}` : "Selecciona uno para revisar su regla.")}</p>
+          </div>
+        </div>
+      `;
+    }
+
+    function addMineducConcept() {
+      const nextId = `concept-${state.mineducConcepts.length + 1}`;
+      state.mineducConcepts.unshift({
+        id: nextId,
+        sourceName: "Nuevo concepto Nubox",
+        category: "Haberes por revisar",
+        imponible: "Pendiente",
+        tributable: "Pendiente",
+        distributionRule: "Pendiente de clasificacion",
+        targetAccount: "Sin asignar",
+        status: "new",
+        lastUse: "Creado manualmente",
+        note: "Define como se comporta este concepto para que el procesamiento no dependa de una limpieza manual previa."
+      });
+      state.selectedMineducConceptId = nextId;
+      renderMineducConceptMaintainer();
+      renderMineducConceptBridge();
+    }
+
     function renderMineducStepper() {
       const steps = [
-        ["Seleccion", "Colegio, RBD y periodo de trabajo."],
+        ["Seleccion e insumo", "Colegio, periodo y reglas de interpretacion."],
         ["Datos fuente", "Remuneraciones, compras y honorarios."],
         ["Distribucion", "Calculo por fuente de financiamiento."],
         ["Validacion", "Checks previos antes de cargar."],
@@ -2714,6 +3473,7 @@
     }
 
     function renderDataTabs() {
+      renderMineducConceptBridge();
       const labels = {
         remuneraciones: ["RUT", "Nombre", "Funcion", "Horas contrato", "Sueldo base", "Horas SEP", "Horas PIE", "Total haberes", "Cotizaciones", "Liquido", "Fuente general", "Fuente SEP", "Fuente PIE"],
         compras: ["Fecha", "N Factura", "Proveedor", "RUT Proveedor", "Descripcion", "Monto doc.", "Monto gasto", "Codigo cuenta", "Fuente financiamiento", "Tipo documento"],
@@ -2820,6 +3580,7 @@
         </tr>
       `).join("");
       renderMineducQuadrature();
+      renderDetailedPayrollBook();
     }
 
     function renderMineducQuadrature() {
@@ -2835,6 +3596,144 @@
         { label: "Gasto operacional", value: formatMoney(totalCompras + totalHonorarios), note: `Compras ${formatMoney(totalCompras)} | Honorarios ${formatMoney(totalHonorarios)}` },
         { label: "Cuadratura final", value: formatMoney(distributionTotal), note: "Total distribuido entre General, SEP y PIE" }
       ].map((item) => `<div class="quad-card"><span class="label">${item.label}</span><strong class="mono">${item.value}</strong><p>${item.note}</p></div>`).join("");
+    }
+
+    function buildDetailedPayrollRows() {
+      const rates = { accidents: 0.0093, afc: 0.024, sis: 0.0153 };
+      return data.remuneraciones.map((entry) => {
+        const [rut, fullName, role, hours, salary, sepHours, pieHours, totalHaberes, cotizaciones, liquido, generalSource, sepSource, pieSource] = entry;
+        const general = parseMoney(generalSource);
+        const sep = parseMoney(sepSource);
+        const pie = parseMoney(pieSource);
+        const haberes = parseMoney(totalHaberes);
+        const workerDiscounts = parseMoney(cotizaciones);
+        const net = parseMoney(liquido);
+        const accidents = Math.round((general + sep + pie) * rates.accidents);
+        const afc = Math.round((general + sep + pie) * rates.afc);
+        const sis = Math.round((general + sep + pie) * rates.sis);
+        const employerCharges = accidents + afc + sis;
+        const companyCost = haberes + employerCharges;
+        const financingRule = [
+          general > 0 ? "General" : "",
+          sep > 0 ? "SEP" : "",
+          pie > 0 ? "PIE" : ""
+        ].filter(Boolean).join(" / ");
+        return {
+          rut,
+          fullName,
+          role,
+          hours,
+          salary: parseMoney(salary),
+          sepHours: Number(sepHours),
+          pieHours: Number(pieHours),
+          haberes,
+          workerDiscounts,
+          net,
+          general,
+          sep,
+          pie,
+          accidents,
+          afc,
+          sis,
+          employerCharges,
+          companyCost,
+          financingRule: financingRule || "Sin mezcla",
+          appliedRule: (sep > 0 || pie > 0) ? "Prorrateo sobre base imponible y horas declaradas" : "Asignacion directa a fuente general"
+        };
+      });
+    }
+
+    function generateDetailedPayrollCsv() {
+      const rows = buildDetailedPayrollRows();
+      const headers = [
+        "RUT",
+        "Trabajador",
+        "Cargo",
+        "Horas Contrato",
+        "Sueldo Base",
+        "Haberes",
+        "Cotizaciones Trabajador",
+        "Liquido",
+        "General",
+        "SEP",
+        "PIE",
+        "Seguro Accidentes",
+        "AFC Empleador",
+        "SIS",
+        "Aportes Patronales",
+        "Costo Empresa",
+        "Regla Fuente",
+        "Criterio Aplicado"
+      ];
+      const lines = rows.map((row) => [
+        row.rut,
+        row.fullName,
+        row.role,
+        row.hours,
+        row.salary,
+        row.haberes,
+        row.workerDiscounts,
+        row.net,
+        row.general,
+        row.sep,
+        row.pie,
+        row.accidents,
+        row.afc,
+        row.sis,
+        row.employerCharges,
+        row.companyCost,
+        row.financingRule,
+        row.appliedRule
+      ].join(";"));
+      return [headers.join(";"), ...lines].join("\r\n");
+    }
+
+    function renderDetailedPayrollBook() {
+      const rows = buildDetailedPayrollRows();
+      const totalCompanyCost = rows.reduce((sum, row) => sum + row.companyCost, 0);
+      const totalEmployerCharges = rows.reduce((sum, row) => sum + row.employerCharges, 0);
+      const totalProtectedFunding = rows.reduce((sum, row) => sum + row.sep + row.pie, 0);
+      const mixedCases = rows.filter((row) => row.sep > 0 || row.pie > 0).length;
+      const readyMappings = getMineducConceptCounts().ready;
+
+      document.getElementById("detailedPayrollKpis").innerHTML = `
+        <div class="detailed-payroll-kpi">
+          <span>Trabajadores</span>
+          <strong class="mono">${rows.length}</strong>
+          <p>Dotacion incluida en el libro detallado demo.</p>
+        </div>
+        <div class="detailed-payroll-kpi">
+          <span>Costo empresa</span>
+          <strong class="mono">${formatMoney(totalCompanyCost)}</strong>
+          <p>Haberes mas aportes patronales clasificados por fuente.</p>
+        </div>
+        <div class="detailed-payroll-kpi">
+          <span>Aportes patronales</span>
+          <strong class="mono">${formatMoney(totalEmployerCharges)}</strong>
+          <p>Seguro accidentes, AFC empleador y SIS.</p>
+        </div>
+        <div class="detailed-payroll-kpi">
+          <span>Casos mixtos</span>
+          <strong class="mono">${mixedCases}</strong>
+          <p>${readyMappings} reglas de concepto listas para sustentar la distribucion.</p>
+        </div>
+      `;
+
+      document.getElementById("detailedPayrollRows").innerHTML = rows.map((row) => `
+        <tr>
+          <td>${row.rut}</td>
+          <td>${row.fullName}</td>
+          <td>${row.role}</td>
+          <td class="money mono">${formatMoney(row.haberes)}</td>
+          <td class="money mono">${formatMoney(row.net)}</td>
+          <td class="money mono">${formatMoney(row.general)}</td>
+          <td class="money mono">${formatMoney(row.sep)}</td>
+          <td class="money mono">${formatMoney(row.pie)}</td>
+          <td class="money mono">${formatMoney(row.employerCharges)}</td>
+          <td class="money mono">${formatMoney(row.companyCost)}</td>
+          <td>${row.financingRule}<br><small>${row.appliedRule}</small></td>
+        </tr>
+      `).join("");
     }
 
     function generateRemuneracionesCsv() {
@@ -3176,7 +4075,9 @@
               ["Inicio de contrato", startDate],
               ["Periodo trabajado", summary.period],
               ["Feriado proporcional", formatMoney(summary.vacation)],
-              ["Indemnizacion", formatMoney(summary.indemnity)]
+              ["Indemnizacion", formatMoney(summary.indemnity)],
+              ["Descuento EFSA", formatMoney(summary.efsaDeduction)],
+              ["Certificado respaldo", summary.efsaCertificateText]
             ])}
           </div>
           <div class="doc-section">
@@ -3186,10 +4087,11 @@
           <div class="doc-section">
             <h5>Segundo</h5>
             <p>La terminacion del vinculo laboral se formaliza por la causal ${escapeHtml(cause)}. El calculo demostrativo considera feriado legal proporcional por ${escapeHtml(formatMoney(summary.vacation))} e indemnizacion por anos por ${escapeHtml(formatMoney(summary.indemnity))} cuando resulta aplicable.</p>
+            <p>Como respaldo complementario, se incorpora ${escapeHtml(summary.efsaCertificateText)} y un descuento EFSA aplicado por ${escapeHtml(formatMoney(summary.efsaDeduction))} solo cuando el estudio decide imputarlo al cierre.</p>
           </div>
           <div class="doc-section">
             <h5>Tercero</h5>
-            <p>El total referencial del finiquito asciende a ${escapeHtml(formatMoney(summary.total))}. Este monto y la modalidad de tramitacion deben ser validados por el equipo antes de la firma o ratificacion.</p>
+            <p>El subtotal previo a ajustes asciende a ${escapeHtml(formatMoney(summary.subtotal))}. Luego del eventual descuento EFSA, el total referencial del finiquito asciende a ${escapeHtml(formatMoney(summary.total))}. Este monto y la modalidad de tramitacion deben ser validados por el equipo antes de la firma o ratificacion.</p>
           </div>
           ${renderSignatureGrid([
             { label: "Empleador", name: schoolName, detail: "Representacion institucional" },
@@ -3262,9 +4164,11 @@
         <div class="summary-line"><strong>Periodo trabajado</strong><p>${summary.period}</p></div>
         <div class="summary-line"><strong>Feriado legal proporcional</strong><p class="money mono">${formatMoney(summary.vacation)}</p></div>
         <div class="summary-line"><strong>Indemnizacion por anos</strong><p class="money mono">${formatMoney(summary.indemnity)}</p></div>
-        <div class="summary-line"><strong>Otros adeudos</strong><p class="money mono">${formatMoney(0)}</p></div>
+        <div class="summary-line"><strong>Descuento EFSA aplicado</strong><p class="money mono">${formatMoney(summary.efsaDeduction)}</p></div>
+        <div class="summary-line"><strong>Aporte empleador respaldado</strong><p class="money mono">${formatMoney(summary.efsaEmployerContribution)}</p></div>
         <div class="summary-line"><strong>Total finiquito</strong><p class="money mono">${formatMoney(summary.total)}</p></div>
         <div class="summary-line"><strong>Tramitacion sugerida</strong><p>${summary.badgeText}</p></div>
+        <div class="summary-line"><strong>Respaldo de calculo</strong><p>${summary.efsaCertificateText}</p></div>
       `;
       document.getElementById("settlementPreview").innerHTML = buildSettlementDocument(summary);
       state.settlementSummaryReady = true;
@@ -3277,6 +4181,8 @@
       const avgSalary = Number(document.getElementById("settlementAvgSalary").value || 0);
       const cause = document.getElementById("settlementCause").value;
       const tramitation = document.querySelector('input[name="tramitation"]:checked').value;
+      const efsa = state.settlementEfsaData;
+      const applyEfsa = document.getElementById("settlementApplyEfsa").checked && efsa;
       const diff = diffBreakdown(start, end);
       const dailySalary = avgSalary / 30;
       const proportionalDays = Number(((diff.totalDays / 365) * 15).toFixed(1));
@@ -3284,13 +4190,22 @@
       const eligible = cause.includes("Art. 161") || cause.includes("Mutuo acuerdo");
       const indemnityMonths = eligible ? Math.min(11, Math.max(1, diff.years + (diff.months > 5 ? 1 : 0))) : 0;
       const indemnity = indemnityMonths * avgSalary;
-      const total = vacation + indemnity;
+      const subtotal = vacation + indemnity;
+      const efsaDeduction = applyEfsa ? efsa.workerDeduction : 0;
+      const efsaEmployerContribution = efsa ? efsa.employerContribution : 0;
+      const total = Math.max(0, subtotal - efsaDeduction);
       const dtRecommended = tramitation === "DT" && total <= 2500000;
       renderSettlementSummary({
         period: `${diff.years} anos, ${diff.months} meses, ${diff.days} dias`,
         vacation,
         indemnity,
+        subtotal,
+        efsaDeduction,
+        efsaEmployerContribution,
         total,
+        efsaCertificateText: efsa
+          ? `${efsa.certificateId} | ${efsa.source} | ${applyEfsa ? "descuento aplicado" : "solo respaldo"}`
+          : "Sin certificado EFSA importado",
         badgeText: dtRecommended
           ? "Este finiquito puede tramitarse en la Direccion del Trabajo (monto bajo tope)."
           : "Este finiquito requiere tramitacion por Notaria."
@@ -3317,13 +4232,35 @@
       });
     }
 
+    function normalizeOfficialName(value = "") {
+      return String(value)
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .replace(/[^a-zA-Z0-9\s,]/g, "")
+        .replace(/\s+/g, " ")
+        .trim()
+        .toLowerCase();
+    }
+
     function resolveDisabilityRecords(inputList) {
       return inputList.map((entry, index) => {
         const found = data.disabilityExamples.find((example) => example.rut.replace(/\./g, "") === entry.rut.replace(/\./g, ""));
         const source = found || data.disabilityExamples[index % data.disabilityExamples.length];
+        const officialName = source.name;
+        const providedName = entry.name || officialName;
+        const exactNameMatch = !entry.name || normalizeOfficialName(entry.name) === normalizeOfficialName(officialName);
+        if (entry.name && !exactNameMatch) {
+          return {
+            rut: entry.rut,
+            name: entry.name,
+            state: "PENDIENTE",
+            detail: `Nombre no coincide exactamente con registro oficial. Oficial: ${officialName}. Revisar primer/segundo nombre antes de reintentar.`,
+            checkedAt: formatDateTime()
+          };
+        }
         return {
           rut: entry.rut,
-          name: entry.name || source.name,
+          name: providedName,
           state: found ? found.state : "HABILITADO",
           detail: found ? found.detail : "Sin registros",
           checkedAt: formatDateTime()
@@ -3504,7 +4441,7 @@
       y -= 6;
       addRect(left, y - 4, pageWidth - (left * 2), 58, [1, 0.97, 0.96]);
       addText(left + 14, y + 26, `Total referencial: ${formatMoney(summary.total)}`, 14, "F2", [0.6, 0.11, 0.11]);
-      addText(left + 14, y + 8, `Feriado proporcional: ${formatMoney(summary.vacation)} | Indemnizacion: ${formatMoney(summary.indemnity)}`, 10, "F1", [0.6, 0.11, 0.11]);
+      addText(left + 14, y + 8, `Feriado proporcional: ${formatMoney(summary.vacation)} | Indemnizacion: ${formatMoney(summary.indemnity)} | EFSA: ${formatMoney(summary.efsaDeduction)}`, 10, "F1", [0.6, 0.11, 0.11]);
 
       y -= 42;
       addText(left, y, "PRIMERO", 11, "F2", [0.12, 0.23, 0.37]);
@@ -3518,6 +4455,10 @@
       addText(left, y, "TERCERO", 11, "F2", [0.12, 0.23, 0.37]);
       y -= 18;
       addWrapped(`El monto total calculado en esta simulacion asciende a ${formatMoney(summary.total)} y requiere validacion final del equipo antes de la firma o ratificacion del documento.`, 11, "F1");
+      y -= 8;
+      addText(left, y, "RESPALDO", 11, "F2", [0.12, 0.23, 0.37]);
+      y -= 18;
+      addWrapped(`Respaldo EFSA considerado: ${summary.efsaCertificateText}. Aporte empleador informado: ${formatMoney(summary.efsaEmployerContribution)}.`, 11, "F1");
 
       addText(left, 122, "Empleador", 10, "F2", [0.39, 0.45, 0.55]);
       addText(left + 295, 122, "Trabajador(a)", 10, "F2", [0.39, 0.45, 0.55]);
@@ -3582,6 +4523,146 @@
       updateSettlementImportStatus(`Datos importados desde ${sourceLabel} para ${profile.settlementRut}. Ahora selecciona causal y fecha de desvinculacion.`, "ok");
     }
 
+    function updateSettlementEfsaStatus(text, type = "") {
+      const status = document.getElementById("settlementEfsaStatus");
+      status.className = `settlement-efsa-status${type ? ` ${type}` : ""}`;
+      status.textContent = text;
+    }
+
+    function renderSettlementEfsaPanel() {
+      const grid = document.getElementById("settlementEfsaGrid");
+      const efsa = state.settlementEfsaData;
+      if (!grid) return;
+      if (!efsa) {
+        grid.innerHTML = `
+          <div class="settlement-efsa-item">
+            <span>Estado</span>
+            <strong>Pendiente</strong>
+            <p>Sin consulta realizada.</p>
+          </div>
+          <div class="settlement-efsa-item">
+            <span>Descuento sugerido</span>
+            <strong class="mono">$0</strong>
+            <p>Se aplicara solo si activas la opcion.</p>
+          </div>
+          <div class="settlement-efsa-item">
+            <span>Aporte empleador</span>
+            <strong class="mono">$0</strong>
+            <p>Respaldo para trazabilidad interna.</p>
+          </div>
+          <div class="settlement-efsa-item">
+            <span>Certificado</span>
+            <strong>Sin documento</strong>
+            <p>Disponible despues de la importacion demo.</p>
+          </div>
+        `;
+        return;
+      }
+      grid.innerHTML = `
+        <div class="settlement-efsa-item">
+          <span>Estado</span>
+          <strong>${efsa.status}</strong>
+          <p>${efsa.coveredPeriod}</p>
+        </div>
+        <div class="settlement-efsa-item">
+          <span>Descuento sugerido</span>
+          <strong class="mono">${formatMoney(efsa.workerDeduction)}</strong>
+          <p>Aplicable solo si el estudio decide descontarlo.</p>
+        </div>
+        <div class="settlement-efsa-item">
+          <span>Aporte empleador</span>
+          <strong class="mono">${formatMoney(efsa.employerContribution)}</strong>
+          <p>Dato de respaldo para carpeta y trazabilidad.</p>
+        </div>
+        <div class="settlement-efsa-item">
+          <span>Certificado</span>
+          <strong>${efsa.certificateId}</strong>
+          <p>${efsa.source} | ${efsa.supportNote}</p>
+        </div>
+      `;
+    }
+
+    function previewSettlementEfsaSupport() {
+      const rut = document.getElementById("settlementRut").value;
+      const normalizedRut = normalizeRut(rut);
+      if (!rut.trim()) {
+        state.settlementEfsaData = null;
+        state.settlementEfsaRut = null;
+        document.getElementById("settlementApplyEfsa").checked = false;
+        updateSettlementEfsaStatus("Selecciona un RUT demo para consultar respaldo EFSA y certificado asociado.");
+        renderSettlementEfsaPanel();
+        return;
+      }
+      if (state.settlementEfsaRut && state.settlementEfsaRut !== normalizedRut) {
+        state.settlementEfsaData = null;
+        state.settlementEfsaRut = null;
+        document.getElementById("settlementApplyEfsa").checked = false;
+        renderSettlementEfsaPanel();
+      }
+      const found = data.settlementEfsaProfiles[normalizedRut];
+      if (found) {
+        updateSettlementEfsaStatus(`Respaldo EFSA disponible para ${rut}. Puedes traerlo desde Filiere FC.`, "ok");
+      } else {
+        updateSettlementEfsaStatus("No encontramos respaldo EFSA demo para ese RUT.", "warn");
+      }
+    }
+
+    function importSettlementEfsa() {
+      const rut = document.getElementById("settlementRut").value;
+      const found = data.settlementEfsaProfiles[normalizeRut(rut)];
+      if (!found) {
+        state.settlementEfsaData = null;
+        state.settlementEfsaRut = null;
+        document.getElementById("settlementApplyEfsa").checked = false;
+        updateSettlementEfsaStatus("No hay datos EFSA demo para ese RUT. Usa uno de los casos disponibles.", "warn");
+        renderSettlementEfsaPanel();
+        return;
+      }
+      state.settlementEfsaData = { ...found };
+      state.settlementEfsaRut = normalizeRut(rut);
+      document.getElementById("settlementApplyEfsa").checked = found.workerDeduction > 0;
+      updateSettlementEfsaStatus(`Datos EFSA importados desde Filiere FC. Certificado ${found.certificateId} listo como respaldo del calculo.`, "ok");
+      renderSettlementEfsaPanel();
+    }
+
+    function openSettlementEfsaCertificate() {
+      const efsa = state.settlementEfsaData;
+      if (!efsa) {
+        alert("Importa primero el respaldo EFSA desde Filiere FC.");
+        return;
+      }
+      openReport("Certificado EFSA", [
+        `Certificado: ${efsa.certificateId}`,
+        `Fuente: ${efsa.source}`,
+        `Periodo cubierto: ${efsa.coveredPeriod}`,
+        `Descuento sugerido trabajador: ${formatMoney(efsa.workerDeduction)}`,
+        `Aporte empleador informado: ${formatMoney(efsa.employerContribution)}`,
+        efsa.supportNote
+      ]);
+    }
+
+    function downloadSettlementEfsaCertificate() {
+      const efsa = state.settlementEfsaData;
+      if (!efsa) {
+        alert("Importa primero el respaldo EFSA desde Filiere FC.");
+        return;
+      }
+      const workerName = document.getElementById("settlementName").value || "TRABAJADOR";
+      const slug = slugifyName(workerName) || "TRABAJADOR";
+      const content = [
+        `CERTIFICADO EFSA`,
+        ``,
+        `Certificado: ${efsa.certificateId}`,
+        `Fuente: ${efsa.source}`,
+        `Periodo cubierto: ${efsa.coveredPeriod}`,
+        `Descuento sugerido trabajador: ${formatMoney(efsa.workerDeduction)}`,
+        `Aporte empleador informado: ${formatMoney(efsa.employerContribution)}`,
+        `Estado: ${efsa.status}`,
+        `Detalle: ${efsa.supportNote}`
+      ].join("\n");
+      downloadBlob(`CERTIFICADO_EFSA_${slug}.txt`, content, "text/plain;charset=utf-8;");
+    }
+
     function importSettlementFromNubox() {
       const rut = document.getElementById("settlementRut").value;
       const found = data.settlementProfiles[normalizeRut(rut)];
@@ -3590,7 +4671,32 @@
         alert("No encontramos ese RUT en Nubox demo para finiquitos. Usa uno de los RUTs disponibles en la lista.");
         return;
       }
+      state.settlementEfsaData = null;
+      state.settlementEfsaRut = null;
+      document.getElementById("settlementApplyEfsa").checked = false;
+      previewSettlementEfsaSupport();
+      renderSettlementEfsaPanel();
       applySettlementData(found);
+    }
+
+    function updateSettlementRouteNote() {
+      const route = document.querySelector('input[name="tramitation"]:checked')?.value || "DT";
+      const note = document.getElementById("settlementRouteNote");
+      const sendBtn = document.getElementById("sendSettlement");
+      if (!note || !sendBtn) return;
+      if (route === "DT") {
+        note.innerHTML = `
+          <strong>Acceso ADT por representante legal electronico</strong>
+          <p>La demo asume un acceso de bajo riesgo: el estudio opera como representante legal electronico para ingresar el finiquito, sin necesidad de compartir credenciales completas del cliente. El ingreso deja trazabilidad y aviso formal en la plataforma.</p>
+        `;
+        sendBtn.textContent = "Enviar a ADT (simulado)";
+        return;
+      }
+      note.innerHTML = `
+        <strong>Ruta por notaria</strong>
+        <p>Cuando el caso no conviene para ADT, la demo deja preparado el expediente con causal, respaldo EFSA y documento listo para revision y firma notarial.</p>
+      `;
+      sendBtn.textContent = "Preparar para Notaria (simulado)";
     }
 
     function bindEvents() {
@@ -3598,6 +4704,8 @@
         setMineducStep(2);
         renderDataTabs();
       });
+
+      document.getElementById("addMineducConcept").addEventListener("click", addMineducConcept);
 
       document.getElementById("backToStep1").addEventListener("click", () => setMineducStep(1));
 
@@ -3618,6 +4726,27 @@
         state.mineducGeneratedFiles = buildMineducCsvFiles();
         renderMineducExportsPanel();
         downloadMineducCsvFiles();
+      });
+
+      document.getElementById("downloadDetailedPayroll").addEventListener("click", () => {
+        const school = getSelectedSchool();
+        const { year } = getSelectedPeriodMeta();
+        const schoolSlug = slugifyName(school.name);
+        downloadBlob(`Libro_Remuneraciones_Detallado_${schoolSlug}_${year}.csv`, `\uFEFF${generateDetailedPayrollCsv()}`, "text/csv;charset=utf-8;");
+      });
+
+      document.getElementById("downloadDetailedPayrollReport").addEventListener("click", () => {
+        const rows = buildDetailedPayrollRows();
+        const totalCompanyCost = rows.reduce((sum, row) => sum + row.companyCost, 0);
+        const totalEmployerCharges = rows.reduce((sum, row) => sum + row.employerCharges, 0);
+        const mixedCases = rows.filter((row) => row.sep > 0 || row.pie > 0).length;
+        openReport("Libro de Remuneraciones Detallado", [
+          `Trabajadores incluidos: ${rows.length}`,
+          `Costo empresa total: ${formatMoney(totalCompanyCost)}`,
+          `Aportes patronales distribuidos: ${formatMoney(totalEmployerCharges)}`,
+          `Casos con mezcla General/SEP/PIE: ${mixedCases}`,
+          "Este reporte demo transparenta costo empresa, mezcla por fuente y criterio de clasificacion por trabajador."
+        ]);
       });
 
       document.getElementById("downloadAllMineduc").addEventListener("click", () => {
@@ -3724,26 +4853,43 @@
       });
 
       document.getElementById("calculateSettlement").addEventListener("click", calculateSettlement);
-      document.getElementById("settlementRut").addEventListener("change", previewSettlementNuboxMatch);
+      document.getElementById("settlementRut").addEventListener("change", () => {
+        previewSettlementNuboxMatch();
+        previewSettlementEfsaSupport();
+      });
       document.getElementById("importSettlementFromNubox").addEventListener("click", importSettlementFromNubox);
+      document.getElementById("importSettlementEfsa").addEventListener("click", importSettlementEfsa);
+      document.getElementById("viewSettlementEfsaCert").addEventListener("click", openSettlementEfsaCertificate);
+      document.getElementById("downloadSettlementEfsaCert").addEventListener("click", downloadSettlementEfsaCertificate);
+      document.getElementById("settlementApplyEfsa").addEventListener("change", () => {
+        if (state.settlementSummaryReady) calculateSettlement();
+      });
+      document.querySelectorAll('input[name="tramitation"]').forEach((input) => {
+        input.addEventListener("change", () => {
+          updateSettlementRouteNote();
+          if (state.settlementSummaryReady) calculateSettlement();
+        });
+      });
 
       document.getElementById("loadSettlementExample").addEventListener("click", () => {
         const example = {
-          settlementRut: "15.678.901-2",
-          settlementName: "Rojas Castillo, Luis",
-          settlementSchool: "3",
+          settlementRut: "17.890.123-4",
+          settlementName: "Jorge Soto Perez",
+          settlementSchool: "4",
           settlementRole: "Docente de Aula",
           settlementStart: "2025-03-01",
-          settlementEnd: "2026-02-28",
+          settlementEnd: "2026-06-30",
           settlementContractType: "Plazo fijo",
-          settlementBaseSalary: "840000",
-          settlementAvgSalary: "840000",
+          settlementBaseSalary: "920000",
+          settlementAvgSalary: "950000",
           settlementCause: "Art. 159 N 4 - Vencimiento de plazo"
         };
         Object.entries(example).forEach(([id, value]) => {
           document.getElementById(id).value = value;
         });
         document.getElementById("tramDt").checked = true;
+        previewSettlementEfsaSupport();
+        importSettlementEfsa();
         updateSettlementImportStatus("Ejemplo cargado. Revisa y confirma causal y fecha de desvinculacion antes de calcular.", "ok");
         calculateSettlement();
       });
@@ -3753,11 +4899,24 @@
           alert("Calcula primero el finiquito.");
           return;
         }
-        const folio = `DT-2026-${String(Math.floor(48000 + Math.random() * 999)).padStart(5, "0")}`;
-        openReport("Ingreso simulado de finiquito", [
-          `Finiquito ${folio} ingresado exitosamente en plataforma Direccion del Trabajo.`,
-          `Trabajador: ${document.getElementById("settlementName").value}`,
-          `Fecha de emision: ${formatDateTime()}`
+        const route = document.querySelector('input[name="tramitation"]:checked')?.value || "DT";
+        const worker = document.getElementById("settlementName").value;
+        if (route === "DT") {
+          const folio = `DT-2026-${String(Math.floor(48000 + Math.random() * 999)).padStart(5, "0")}`;
+          openReport("Ingreso simulado de finiquito", [
+            `Finiquito ${folio} ingresado exitosamente en plataforma Direccion del Trabajo.`,
+            `Trabajador: ${worker}`,
+            "Acceso utilizado: representante legal electronico.",
+            `Fecha de emision: ${formatDateTime()}`
+          ]);
+          return;
+        }
+        const caseId = `NOT-2026-${String(Math.floor(31000 + Math.random() * 999)).padStart(5, "0")}`;
+        openReport("Expediente notarial simulado", [
+          `Expediente ${caseId} preparado para revision y firma notarial.`,
+          `Trabajador: ${worker}`,
+          `Respaldo EFSA: ${state.settlementSummaryData?.efsaCertificateText || "sin respaldo importado"}`,
+          `Fecha de preparacion: ${formatDateTime()}`
         ]);
       });
 
@@ -3832,6 +4991,9 @@
       renderDashboard();
       renderAlertsCenter();
       populateCommonOptions();
+      updateSettlementRouteNote();
+      renderMineducConceptMaintainer();
+      renderMineducConceptBridge();
       renderMineducStepper();
       renderDataTabs();
       renderSingleList();

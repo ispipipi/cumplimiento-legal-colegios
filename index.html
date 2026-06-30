@@ -2048,14 +2048,14 @@
               <div class="settlement-efsa-card">
                 <div class="settlement-efsa-head">
                   <div>
-                    <h4>Respaldo EFSA via Filiere FC</h4>
-                    <p>Trae cotizaciones, certificado y monto sugerido de descuento para dejar respaldo del calculo y decidir si se aplica o no al cierre.</p>
+                    <h4>Descuento AFC del empleador</h4>
+                    <p>Trae un certificado AFC simulado, toma el aporte del empleador y usa ese valor como descuento del finiquito solo cuando la causal es necesidades de la empresa.</p>
                   </div>
                   <button type="button" class="btn btn-secondary" id="importSettlementEfsa">
-                    <span>Importar EFSA con Filiere FC</span>
+                    <span>Importar certificado AFC</span>
                   </button>
                 </div>
-                <p id="settlementEfsaStatus" class="settlement-efsa-status">Selecciona un RUT demo para consultar respaldo EFSA y certificado asociado.</p>
+                <p id="settlementEfsaStatus" class="settlement-efsa-status">Selecciona un RUT demo para consultar el certificado AFC y el aporte del empleador.</p>
                 <div class="settlement-efsa-grid" id="settlementEfsaGrid">
                   <div class="settlement-efsa-item">
                     <span>Estado</span>
@@ -2063,14 +2063,14 @@
                     <p>Sin consulta realizada.</p>
                   </div>
                   <div class="settlement-efsa-item">
-                    <span>Descuento sugerido</span>
+                    <span>Descuento AFC</span>
                     <strong class="mono">$0</strong>
-                    <p>Se aplicara solo si activas la opcion.</p>
+                    <p>Se activa solo para la causal Art. 161.</p>
                   </div>
                   <div class="settlement-efsa-item">
                     <span>Aporte empleador</span>
                     <strong class="mono">$0</strong>
-                    <p>Respaldo para trazabilidad interna.</p>
+                    <p>Valor base que se descuenta del finiquito.</p>
                   </div>
                   <div class="settlement-efsa-item">
                     <span>Certificado</span>
@@ -2078,13 +2078,9 @@
                     <p>Disponible despues de la importacion demo.</p>
                   </div>
                 </div>
-                <div class="field-inline" style="margin-top: 1rem; flex-wrap: wrap;">
-                  <input id="settlementApplyEfsa" type="checkbox">
-                  <label for="settlementApplyEfsa">Aplicar descuento EFSA al total del finiquito</label>
-                </div>
                 <div class="settlement-efsa-actions">
-                  <button type="button" class="btn btn-secondary" id="viewSettlementEfsaCert">Ver certificado EFSA</button>
-                  <button type="button" class="btn btn-secondary" id="downloadSettlementEfsaCert">Descargar certificado EFSA</button>
+                  <button type="button" class="btn btn-secondary" id="viewSettlementEfsaCert">Ver certificado AFC</button>
+                  <button type="button" class="btn btn-secondary" id="downloadSettlementEfsaCert">Descargar certificado AFC</button>
                 </div>
               </div>
               <div style="grid-column: 1 / -1;">
@@ -2569,48 +2565,48 @@
       },
       settlementEfsaProfiles: {
         "256789012": {
-          certificateId: "EFSA-2026-44017",
-          source: "Filiere FC",
+          certificateId: "AFC-2026-44017",
+          source: "AFC",
           coveredPeriod: "Enero 2026 a Junio 2026",
           workerDeduction: 186000,
           employerContribution: 74200,
-          supportNote: "Certificado recuperado con cotizaciones informadas y saldo regularizable previo a firma.",
+          supportNote: "Certificado AFC recuperado con detalle de aporte empleador disponible para rebaja legal del finiquito.",
           status: "Respaldo completo"
         },
         "134567890": {
-          certificateId: "EFSA-2026-44018",
-          source: "Filiere FC",
+          certificateId: "AFC-2026-44018",
+          source: "AFC",
           coveredPeriod: "Febrero 2026 a Junio 2026",
           workerDeduction: 98000,
           employerContribution: 42100,
-          supportNote: "Caso con descuento sugerido menor y documento listo para adjuntar a carpeta del finiquito.",
+          supportNote: "Caso con aporte empleador menor y certificado listo para adjuntar al expediente del finiquito.",
           status: "Respaldo completo"
         },
         "145678901": {
-          certificateId: "EFSA-2026-44019",
-          source: "Filiere FC",
+          certificateId: "AFC-2026-44019",
+          source: "AFC",
           coveredPeriod: "Marzo 2026 a Junio 2026",
           workerDeduction: 0,
           employerContribution: 55800,
-          supportNote: "Sin descuento a trabajador. Solo respaldo de cotizaciones y regularizacion empleador.",
+          supportNote: "Certificado con aporte empleador disponible para rebaja si la causal corresponde a necesidades de la empresa.",
           status: "Solo respaldo empleador"
         },
         "178901234": {
-          certificateId: "EFSA-2026-44020",
-          source: "Filiere FC",
+          certificateId: "AFC-2026-44020",
+          source: "AFC",
           coveredPeriod: "Marzo 2025 a Junio 2026",
           workerDeduction: 214000,
           employerContribution: 89600,
-          supportNote: "Certificado sugiere descuento EFSA aplicable, sujeto a confirmacion del estudio.",
+          supportNote: "Certificado AFC con aporte empleador listo para rebajar el finiquito en causal Art. 161.",
           status: "Respaldo completo"
         },
         "189012345": {
-          certificateId: "EFSA-2026-44021",
-          source: "Filiere FC",
+          certificateId: "AFC-2026-44021",
+          source: "AFC",
           coveredPeriod: "Agosto 2025 a Junio 2026",
           workerDeduction: 123000,
           employerContribution: 46800,
-          supportNote: "Cotizaciones levantadas con respaldo util para anexar a expediente y sustentar el calculo.",
+          supportNote: "Caso con certificado AFC disponible y aporte empleador acotado para revision final.",
           status: "Respaldo completo"
         }
       },
@@ -4076,7 +4072,7 @@
               ["Periodo trabajado", summary.period],
               ["Feriado proporcional", formatMoney(summary.vacation)],
               ["Indemnizacion", formatMoney(summary.indemnity)],
-              ["Descuento EFSA", formatMoney(summary.efsaDeduction)],
+              ["Descuento AFC", formatMoney(summary.efsaDeduction)],
               ["Certificado respaldo", summary.efsaCertificateText]
             ])}
           </div>
@@ -4087,11 +4083,11 @@
           <div class="doc-section">
             <h5>Segundo</h5>
             <p>La terminacion del vinculo laboral se formaliza por la causal ${escapeHtml(cause)}. El calculo demostrativo considera feriado legal proporcional por ${escapeHtml(formatMoney(summary.vacation))} e indemnizacion por anos por ${escapeHtml(formatMoney(summary.indemnity))} cuando resulta aplicable.</p>
-            <p>Como respaldo complementario, se incorpora ${escapeHtml(summary.efsaCertificateText)} y un descuento EFSA aplicado por ${escapeHtml(formatMoney(summary.efsaDeduction))} solo cuando el estudio decide imputarlo al cierre.</p>
+            <p>Como respaldo complementario, se incorpora ${escapeHtml(summary.efsaCertificateText)}. Si la causal corresponde a necesidades de la empresa, el calculo rebaja el aporte del empleador informado en el certificado AFC por ${escapeHtml(formatMoney(summary.efsaDeduction))}.</p>
           </div>
           <div class="doc-section">
             <h5>Tercero</h5>
-            <p>El subtotal previo a ajustes asciende a ${escapeHtml(formatMoney(summary.subtotal))}. Luego del eventual descuento EFSA, el total referencial del finiquito asciende a ${escapeHtml(formatMoney(summary.total))}. Este monto y la modalidad de tramitacion deben ser validados por el equipo antes de la firma o ratificacion.</p>
+            <p>El subtotal previo a ajustes asciende a ${escapeHtml(formatMoney(summary.subtotal))}. Luego del eventual descuento AFC, el total referencial del finiquito asciende a ${escapeHtml(formatMoney(summary.total))}. Este monto y la modalidad de tramitacion deben ser validados por el equipo antes de la firma o ratificacion.</p>
           </div>
           ${renderSignatureGrid([
             { label: "Empleador", name: schoolName, detail: "Representacion institucional" },
@@ -4164,8 +4160,8 @@
         <div class="summary-line"><strong>Periodo trabajado</strong><p>${summary.period}</p></div>
         <div class="summary-line"><strong>Feriado legal proporcional</strong><p class="money mono">${formatMoney(summary.vacation)}</p></div>
         <div class="summary-line"><strong>Indemnizacion por anos</strong><p class="money mono">${formatMoney(summary.indemnity)}</p></div>
-        <div class="summary-line"><strong>Descuento EFSA aplicado</strong><p class="money mono">${formatMoney(summary.efsaDeduction)}</p></div>
-        <div class="summary-line"><strong>Aporte empleador respaldado</strong><p class="money mono">${formatMoney(summary.efsaEmployerContribution)}</p></div>
+        <div class="summary-line"><strong>Descuento AFC aplicado</strong><p class="money mono">${formatMoney(summary.efsaDeduction)}</p></div>
+        <div class="summary-line"><strong>Aporte empleador certificado</strong><p class="money mono">${formatMoney(summary.efsaEmployerContribution)}</p></div>
         <div class="summary-line"><strong>Total finiquito</strong><p class="money mono">${formatMoney(summary.total)}</p></div>
         <div class="summary-line"><strong>Tramitacion sugerida</strong><p>${summary.badgeText}</p></div>
         <div class="summary-line"><strong>Respaldo de calculo</strong><p>${summary.efsaCertificateText}</p></div>
@@ -4182,7 +4178,7 @@
       const cause = document.getElementById("settlementCause").value;
       const tramitation = document.querySelector('input[name="tramitation"]:checked').value;
       const efsa = state.settlementEfsaData;
-      const applyEfsa = document.getElementById("settlementApplyEfsa").checked && efsa;
+      const afcApplicable = cause.includes("Art. 161");
       const diff = diffBreakdown(start, end);
       const dailySalary = avgSalary / 30;
       const proportionalDays = Number(((diff.totalDays / 365) * 15).toFixed(1));
@@ -4191,7 +4187,7 @@
       const indemnityMonths = eligible ? Math.min(11, Math.max(1, diff.years + (diff.months > 5 ? 1 : 0))) : 0;
       const indemnity = indemnityMonths * avgSalary;
       const subtotal = vacation + indemnity;
-      const efsaDeduction = applyEfsa ? efsa.workerDeduction : 0;
+      const efsaDeduction = afcApplicable && efsa ? efsa.employerContribution : 0;
       const efsaEmployerContribution = efsa ? efsa.employerContribution : 0;
       const total = Math.max(0, subtotal - efsaDeduction);
       const dtRecommended = tramitation === "DT" && total <= 2500000;
@@ -4204,8 +4200,8 @@
         efsaEmployerContribution,
         total,
         efsaCertificateText: efsa
-          ? `${efsa.certificateId} | ${efsa.source} | ${applyEfsa ? "descuento aplicado" : "solo respaldo"}`
-          : "Sin certificado EFSA importado",
+          ? `${efsa.certificateId} | ${efsa.source} | ${afcApplicable ? "rebaja AFC aplicada sobre aporte empleador" : "certificado sin aplicacion por causal"}`
+          : "Sin certificado AFC importado",
         badgeText: dtRecommended
           ? "Este finiquito puede tramitarse en la Direccion del Trabajo (monto bajo tope)."
           : "Este finiquito requiere tramitacion por Notaria."
@@ -4441,7 +4437,7 @@
       y -= 6;
       addRect(left, y - 4, pageWidth - (left * 2), 58, [1, 0.97, 0.96]);
       addText(left + 14, y + 26, `Total referencial: ${formatMoney(summary.total)}`, 14, "F2", [0.6, 0.11, 0.11]);
-      addText(left + 14, y + 8, `Feriado proporcional: ${formatMoney(summary.vacation)} | Indemnizacion: ${formatMoney(summary.indemnity)} | EFSA: ${formatMoney(summary.efsaDeduction)}`, 10, "F1", [0.6, 0.11, 0.11]);
+      addText(left + 14, y + 8, `Feriado proporcional: ${formatMoney(summary.vacation)} | Indemnizacion: ${formatMoney(summary.indemnity)} | AFC: ${formatMoney(summary.efsaDeduction)}`, 10, "F1", [0.6, 0.11, 0.11]);
 
       y -= 42;
       addText(left, y, "PRIMERO", 11, "F2", [0.12, 0.23, 0.37]);
@@ -4458,7 +4454,7 @@
       y -= 8;
       addText(left, y, "RESPALDO", 11, "F2", [0.12, 0.23, 0.37]);
       y -= 18;
-      addWrapped(`Respaldo EFSA considerado: ${summary.efsaCertificateText}. Aporte empleador informado: ${formatMoney(summary.efsaEmployerContribution)}.`, 11, "F1");
+      addWrapped(`Respaldo AFC considerado: ${summary.efsaCertificateText}. Aporte empleador informado: ${formatMoney(summary.efsaEmployerContribution)}.`, 11, "F1");
 
       addText(left, 122, "Empleador", 10, "F2", [0.39, 0.45, 0.55]);
       addText(left + 295, 122, "Trabajador(a)", 10, "F2", [0.39, 0.45, 0.55]);
@@ -4541,14 +4537,14 @@
             <p>Sin consulta realizada.</p>
           </div>
           <div class="settlement-efsa-item">
-            <span>Descuento sugerido</span>
+            <span>Descuento AFC</span>
             <strong class="mono">$0</strong>
-            <p>Se aplicara solo si activas la opcion.</p>
+            <p>Se aplica solo para la causal Art. 161.</p>
           </div>
           <div class="settlement-efsa-item">
             <span>Aporte empleador</span>
             <strong class="mono">$0</strong>
-            <p>Respaldo para trazabilidad interna.</p>
+            <p>Valor base que rebaja el finiquito.</p>
           </div>
           <div class="settlement-efsa-item">
             <span>Certificado</span>
@@ -4565,14 +4561,14 @@
           <p>${efsa.coveredPeriod}</p>
         </div>
         <div class="settlement-efsa-item">
-          <span>Descuento sugerido</span>
-          <strong class="mono">${formatMoney(efsa.workerDeduction)}</strong>
-          <p>Aplicable solo si el estudio decide descontarlo.</p>
+          <span>Descuento AFC</span>
+          <strong class="mono">${formatMoney(efsa.employerContribution)}</strong>
+          <p>Se rebaja solo si la causal es necesidades de la empresa.</p>
         </div>
         <div class="settlement-efsa-item">
           <span>Aporte empleador</span>
           <strong class="mono">${formatMoney(efsa.employerContribution)}</strong>
-          <p>Dato de respaldo para carpeta y trazabilidad.</p>
+          <p>Monto tomado desde el certificado AFC.</p>
         </div>
         <div class="settlement-efsa-item">
           <span>Certificado</span>
@@ -4585,25 +4581,29 @@
     function previewSettlementEfsaSupport() {
       const rut = document.getElementById("settlementRut").value;
       const normalizedRut = normalizeRut(rut);
+      const cause = document.getElementById("settlementCause").value || "";
       if (!rut.trim()) {
         state.settlementEfsaData = null;
         state.settlementEfsaRut = null;
-        document.getElementById("settlementApplyEfsa").checked = false;
-        updateSettlementEfsaStatus("Selecciona un RUT demo para consultar respaldo EFSA y certificado asociado.");
+        updateSettlementEfsaStatus("Selecciona un RUT demo para consultar el certificado AFC y el aporte del empleador.");
         renderSettlementEfsaPanel();
         return;
       }
       if (state.settlementEfsaRut && state.settlementEfsaRut !== normalizedRut) {
         state.settlementEfsaData = null;
         state.settlementEfsaRut = null;
-        document.getElementById("settlementApplyEfsa").checked = false;
         renderSettlementEfsaPanel();
       }
       const found = data.settlementEfsaProfiles[normalizedRut];
       if (found) {
-        updateSettlementEfsaStatus(`Respaldo EFSA disponible para ${rut}. Puedes traerlo desde Filiere FC.`, "ok");
+        updateSettlementEfsaStatus(
+          cause.includes("Art. 161")
+            ? `Certificado AFC disponible para ${rut}. Si lo importas, el aporte empleador se rebajara del finiquito.`
+            : `Certificado AFC disponible para ${rut}. El descuento solo se aplicara si eliges la causal necesidades de la empresa.`,
+          "ok"
+        );
       } else {
-        updateSettlementEfsaStatus("No encontramos respaldo EFSA demo para ese RUT.", "warn");
+        updateSettlementEfsaStatus("No encontramos certificado AFC demo para ese RUT.", "warn");
       }
     }
 
@@ -4613,30 +4613,28 @@
       if (!found) {
         state.settlementEfsaData = null;
         state.settlementEfsaRut = null;
-        document.getElementById("settlementApplyEfsa").checked = false;
-        updateSettlementEfsaStatus("No hay datos EFSA demo para ese RUT. Usa uno de los casos disponibles.", "warn");
+        updateSettlementEfsaStatus("No hay certificado AFC demo para ese RUT. Usa uno de los casos disponibles.", "warn");
         renderSettlementEfsaPanel();
         return;
       }
       state.settlementEfsaData = { ...found };
       state.settlementEfsaRut = normalizeRut(rut);
-      document.getElementById("settlementApplyEfsa").checked = found.workerDeduction > 0;
-      updateSettlementEfsaStatus(`Datos EFSA importados desde Filiere FC. Certificado ${found.certificateId} listo como respaldo del calculo.`, "ok");
+      updateSettlementEfsaStatus(`Certificado AFC ${found.certificateId} importado. El calculo usara el aporte empleador solo para la causal necesidades de la empresa.`, "ok");
       renderSettlementEfsaPanel();
     }
 
     function openSettlementEfsaCertificate() {
       const efsa = state.settlementEfsaData;
       if (!efsa) {
-        alert("Importa primero el respaldo EFSA desde Filiere FC.");
+        alert("Importa primero el certificado AFC.");
         return;
       }
-      openReport("Certificado EFSA", [
+      openReport("Certificado AFC", [
         `Certificado: ${efsa.certificateId}`,
         `Fuente: ${efsa.source}`,
         `Periodo cubierto: ${efsa.coveredPeriod}`,
-        `Descuento sugerido trabajador: ${formatMoney(efsa.workerDeduction)}`,
         `Aporte empleador informado: ${formatMoney(efsa.employerContribution)}`,
+        `Descuento AFC aplicable: ${formatMoney(efsa.employerContribution)}`,
         efsa.supportNote
       ]);
     }
@@ -4644,23 +4642,23 @@
     function downloadSettlementEfsaCertificate() {
       const efsa = state.settlementEfsaData;
       if (!efsa) {
-        alert("Importa primero el respaldo EFSA desde Filiere FC.");
+        alert("Importa primero el certificado AFC.");
         return;
       }
       const workerName = document.getElementById("settlementName").value || "TRABAJADOR";
       const slug = slugifyName(workerName) || "TRABAJADOR";
       const content = [
-        `CERTIFICADO EFSA`,
+        `CERTIFICADO AFC`,
         ``,
         `Certificado: ${efsa.certificateId}`,
         `Fuente: ${efsa.source}`,
         `Periodo cubierto: ${efsa.coveredPeriod}`,
-        `Descuento sugerido trabajador: ${formatMoney(efsa.workerDeduction)}`,
         `Aporte empleador informado: ${formatMoney(efsa.employerContribution)}`,
+        `Descuento AFC aplicable: ${formatMoney(efsa.employerContribution)}`,
         `Estado: ${efsa.status}`,
         `Detalle: ${efsa.supportNote}`
       ].join("\n");
-      downloadBlob(`CERTIFICADO_EFSA_${slug}.txt`, content, "text/plain;charset=utf-8;");
+      downloadBlob(`CERTIFICADO_AFC_${slug}.txt`, content, "text/plain;charset=utf-8;");
     }
 
     function importSettlementFromNubox() {
@@ -4673,7 +4671,6 @@
       }
       state.settlementEfsaData = null;
       state.settlementEfsaRut = null;
-      document.getElementById("settlementApplyEfsa").checked = false;
       previewSettlementEfsaSupport();
       renderSettlementEfsaPanel();
       applySettlementData(found);
@@ -4694,7 +4691,7 @@
       }
       note.innerHTML = `
         <strong>Ruta por notaria</strong>
-        <p>Cuando el caso no conviene para ADT, la demo deja preparado el expediente con causal, respaldo EFSA y documento listo para revision y firma notarial.</p>
+        <p>Cuando el caso no conviene para ADT, la demo deja preparado el expediente con causal, certificado AFC y documento listo para revision y firma notarial.</p>
       `;
       sendBtn.textContent = "Preparar para Notaria (simulado)";
     }
@@ -4861,7 +4858,8 @@
       document.getElementById("importSettlementEfsa").addEventListener("click", importSettlementEfsa);
       document.getElementById("viewSettlementEfsaCert").addEventListener("click", openSettlementEfsaCertificate);
       document.getElementById("downloadSettlementEfsaCert").addEventListener("click", downloadSettlementEfsaCertificate);
-      document.getElementById("settlementApplyEfsa").addEventListener("change", () => {
+      document.getElementById("settlementCause").addEventListener("change", () => {
+        previewSettlementEfsaSupport();
         if (state.settlementSummaryReady) calculateSettlement();
       });
       document.querySelectorAll('input[name="tramitation"]').forEach((input) => {
@@ -4882,7 +4880,7 @@
           settlementContractType: "Plazo fijo",
           settlementBaseSalary: "920000",
           settlementAvgSalary: "950000",
-          settlementCause: "Art. 159 N 4 - Vencimiento de plazo"
+          settlementCause: "Art. 161 - Necesidad de la empresa"
         };
         Object.entries(example).forEach(([id, value]) => {
           document.getElementById(id).value = value;
@@ -4915,7 +4913,7 @@
         openReport("Expediente notarial simulado", [
           `Expediente ${caseId} preparado para revision y firma notarial.`,
           `Trabajador: ${worker}`,
-          `Respaldo EFSA: ${state.settlementSummaryData?.efsaCertificateText || "sin respaldo importado"}`,
+          `Respaldo AFC: ${state.settlementSummaryData?.efsaCertificateText || "sin respaldo importado"}`,
           `Fecha de preparacion: ${formatDateTime()}`
         ]);
       });
